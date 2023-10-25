@@ -9,6 +9,7 @@ def poisson_blend(source_image, target_image, target_mask):
     #source_image: image to be cloned
     #target_image: image to be cloned into
     #target_mask: mask of the target image
+
     # Compute the Laplacian of the source image
     # if use cv2.laplacian will need to compute 3 channel seperately and combine them in the end
     laplacian_source = cv2.Laplacian(source_image, cv2.CV_64F)
@@ -19,13 +20,18 @@ def poisson_blend(source_image, target_image, target_mask):
     # Total number of pixels in the mask
     num_pixels = len(mask_indices[0])
     
+    """ 
+        the A and b matrix setting, 
+        refers to https://github.com/willemmanuel/poisson-image-editing/blob/master/poisson.py 
+    """
+
     # Create matrix A and vector b
     # Create A as a sparse matrix
     A = lil_matrix((num_pixels, num_pixels))
     
     # Create a mapping from (x, y) coordinates to index in A and b
     coord_to_idx = {(x,y): idx for idx, (x,y) in enumerate(zip(mask_indices[1], mask_indices[0]))}
-    
+
     # Setting up the linear system of equations for Poisson blending based on the Laplacian
     # Fill in matrix A
     for idx, (y, x) in enumerate(zip(mask_indices[0], mask_indices[1])):
@@ -49,9 +55,11 @@ def poisson_blend(source_image, target_image, target_mask):
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 nx, ny = x + dx, y + dy
                 if not (ny, nx) in coord_to_idx:
-                    b[idx] = target_channels[channel][ny, nx]
+                    # if any surrounding neibors are not in the mask, 
+                    # then it's the boundary of mask
+                    # add the target color into the the laplacian of source 
+                    b[idx] += target_channels[channel][ny, nx]
                     
-
         # Convert A to CSR format before solving
         A = A.tocsr()
         # Solve for the pixel values for the current channel
@@ -72,7 +80,7 @@ def poisson_blend(source_image, target_image, target_mask):
 
 if __name__ == '__main__':
     #read source and target images
-    source_path = 'source1.jpg'
+    source_path = 'source2.jpg'
     target_path = 'target.jpg'
     source_image = cv2.imread(source_path)
     target_image = cv2.imread(target_path)
@@ -82,5 +90,5 @@ if __name__ == '__main__':
 
     ##poisson blend
     blended_image, least_square_error = poisson_blend(im_source, target_image, mask)
-    cv2.imwrite('blended_image_1.jpg', blended_image)
+    cv2.imwrite('blended_image_2.jpg', blended_image)
     print("Least Squares Error:", least_square_error)

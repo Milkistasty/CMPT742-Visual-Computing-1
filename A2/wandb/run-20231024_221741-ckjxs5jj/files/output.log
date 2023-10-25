@@ -1,0 +1,59 @@
+C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ..\aten\src\ATen\native\TensorShape.cpp:3484.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py:4236: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn(
+batch 0 --- Loss: 0.2105
+batch 1 --- Loss: 0.1925
+batch 2 --- Loss: 0.1596
+batch 3 --- Loss: 0.1238
+batch 4 --- Loss: 0.0844
+batch 5 --- Loss: 0.0683
+batch 6 --- Loss: 0.0403
+batch 7 --- Loss: 0.0266
+Epoch 1 / 5 --- Loss: 0.1208
+Accuracy: 1.0000 ---- Loss: 0.1005
+batch 0 --- Loss: 0.0162
+batch 1 --- Loss: 0.0134
+batch 2 --- Loss: 0.0079
+batch 3 --- Loss: 0.0053
+batch 4 --- Loss: 0.0045
+batch 5 --- Loss: 0.0035
+batch 6 --- Loss: 0.0023
+batch 7 --- Loss: 0.0017
+Epoch 2 / 5 --- Loss: 0.0073
+Accuracy: 1.0000 ---- Loss: 0.0187
+batch 0 --- Loss: 0.0015
+batch 1 --- Loss: 0.0013
+batch 2 --- Loss: 0.0013
+batch 3 --- Loss: 0.0012
+batch 4 --- Loss: 0.0011
+batch 5 --- Loss: 0.0010
+batch 6 --- Loss: 0.0010
+batch 7 --- Loss: 0.0009
+Epoch 3 / 5 --- Loss: 0.0012
+Accuracy: 1.0000 ---- Loss: 0.0015
+batch 0 --- Loss: 0.0009
+batch 1 --- Loss: 0.0008
+batch 2 --- Loss: 0.0008
+batch 3 --- Loss: 0.0008
+batch 4 --- Loss: 0.0007
+batch 5 --- Loss: 0.0007
+batch 6 --- Loss: 0.0007
+batch 7 --- Loss: 0.0006
+Epoch 4 / 5 --- Loss: 0.0008
+Accuracy: 1.0000 ---- Loss: 0.0006
+batch 0 --- Loss: 0.0006
+batch 1 --- Loss: 0.0006
+batch 2 --- Loss: 0.0006
+batch 3 --- Loss: 0.0005
+batch 4 --- Loss: 0.0005
+batch 5 --- Loss: 0.0005
+batch 6 --- Loss: 0.0005
+batch 7 --- Loss: 0.0005
+Epoch 5 / 5 --- Loss: 0.0006
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 192, in <module>
+    axes[i, 1].imshow(output_masks[i].squeeze(0))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot select an axis to squeeze out which has size not equal to one
+Accuracy: 1.0000 ---- Loss: 0.0004

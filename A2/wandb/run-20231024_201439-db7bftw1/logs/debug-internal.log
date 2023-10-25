@@ -1,0 +1,434 @@
+2023-10-24 20:14:39,267 INFO    StreamThr :18152 [internal.py:wandb_internal():86] W&B internal server running at pid: 18152, started at: 2023-10-24 20:14:39.267507
+2023-10-24 20:14:39,268 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status
+2023-10-24 20:14:39,269 INFO    WriterThread:18152 [datastore.py:open_for_write():85] open: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\run-db7bftw1.wandb
+2023-10-24 20:14:39,270 DEBUG   SenderThread:18152 [sender.py:send():380] send: header
+2023-10-24 20:14:39,318 DEBUG   SenderThread:18152 [sender.py:send():380] send: run
+2023-10-24 20:14:39,795 INFO    SenderThread:18152 [dir_watcher.py:__init__():211] watching files in: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files
+2023-10-24 20:14:39,796 INFO    SenderThread:18152 [sender.py:_start_run_threads():1122] run started: db7bftw1 with start time 1698203679.267507
+2023-10-24 20:14:39,802 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: check_version
+2023-10-24 20:14:39,802 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: check_version
+2023-10-24 20:14:40,132 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: run_start
+2023-10-24 20:14:40,179 DEBUG   HandlerThread:18152 [system_info.py:__init__():32] System info init
+2023-10-24 20:14:40,179 DEBUG   HandlerThread:18152 [system_info.py:__init__():47] System info init done
+2023-10-24 20:14:40,179 INFO    HandlerThread:18152 [system_monitor.py:start():194] Starting system monitor
+2023-10-24 20:14:40,179 INFO    SystemMonitor:18152 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-10-24 20:14:40,180 INFO    HandlerThread:18152 [system_monitor.py:probe():214] Collecting system info
+2023-10-24 20:14:40,185 INFO    SystemMonitor:18152 [interfaces.py:start():190] Started cpu monitoring
+2023-10-24 20:14:40,186 INFO    SystemMonitor:18152 [interfaces.py:start():190] Started disk monitoring
+2023-10-24 20:14:40,187 INFO    SystemMonitor:18152 [interfaces.py:start():190] Started gpu monitoring
+2023-10-24 20:14:40,193 INFO    SystemMonitor:18152 [interfaces.py:start():190] Started memory monitoring
+2023-10-24 20:14:40,206 INFO    SystemMonitor:18152 [interfaces.py:start():190] Started network monitoring
+2023-10-24 20:14:40,210 DEBUG   HandlerThread:18152 [system_info.py:probe():196] Probing system
+2023-10-24 20:14:40,211 DEBUG   HandlerThread:18152 [system_info.py:_probe_git():181] Probing git
+2023-10-24 20:14:40,304 DEBUG   HandlerThread:18152 [system_info.py:_probe_git():189] Probing git done
+2023-10-24 20:14:40,304 DEBUG   HandlerThread:18152 [system_info.py:probe():244] Probing system done
+2023-10-24 20:14:40,304 DEBUG   HandlerThread:18152 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.5', 'heartbeatAt': '2023-10-25T03:14:40.210328', 'startedAt': '2023-10-25T03:14:39.261981', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py', 'codePathLocal': 'assignment_2\\train.py', 'codePath': 'A2\\assignment_2\\train.py', 'git': {'remote': None, 'commit': 'fa3af39974944fc0ed5d83891ebdc7e89310fb28'}, 'email': 'wenhewangcrane@gmail.com', 'root': 'C:/Users/Alienware/Desktop/VC CMPT742', 'host': 'wenhe', 'username': 'Alienware', 'executable': 'C:\\Users\\Alienware\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2200.0, 'min': 0.0, 'max': 2200.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 0.0, 'max': 2200.0}], 'disk': {'/': {'total': 931.1415977478027, 'used': 162.35641479492188}}, 'gpu': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'memory_total': 12878610432}], 'memory': {'total': 63.76631164550781}}
+2023-10-24 20:14:40,304 INFO    HandlerThread:18152 [system_monitor.py:probe():224] Finished collecting system info
+2023-10-24 20:14:40,304 INFO    HandlerThread:18152 [system_monitor.py:probe():227] Publishing system info
+2023-10-24 20:14:40,304 DEBUG   HandlerThread:18152 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-24 20:14:40,304 DEBUG   HandlerThread:18152 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-24 20:14:40,305 INFO    HandlerThread:18152 [system_monitor.py:probe():229] Finished publishing system info
+2023-10-24 20:14:40,307 DEBUG   SenderThread:18152 [sender.py:send():380] send: files
+2023-10-24 20:14:40,307 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-24 20:14:40,312 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:14:40,312 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:14:40,313 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:14:40,718 DEBUG   SenderThread:18152 [sender.py:send():380] send: telemetry
+2023-10-24 20:14:40,718 DEBUG   SenderThread:18152 [sender.py:send():380] send: telemetry
+2023-10-24 20:14:40,808 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\requirements.txt
+2023-10-24 20:14:40,808 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-metadata.json
+2023-10-24 20:14:40,808 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:41,048 INFO    wandb-upload_0:18152 [upload_job.py:push():131] Uploaded file C:\Users\ALIENW~1\AppData\Local\Temp\tmpx_6e1ipfwandb\hbw7xtak-wandb-metadata.json
+2023-10-24 20:14:42,823 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:43,837 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:44,534 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:14:44,848 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:44,882 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:44,882 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:44,882 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:44,883 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:45,318 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:45,318 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:45,319 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:45,319 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:45,860 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:14:46,872 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:48,883 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:49,098 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:49,099 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:49,099 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:49,099 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:49,456 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:49,456 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:49,456 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:49,456 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:49,538 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:14:49,893 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:14:50,905 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:52,932 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:52,978 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:52,979 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:52,979 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:52,979 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:53,365 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:53,365 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:53,365 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:53,366 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:53,938 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:14:54,750 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:14:54,949 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:55,706 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:14:55,706 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:14:55,706 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:14:56,962 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:57,016 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:57,017 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:57,017 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:57,017 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:57,431 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:14:57,432 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:14:57,432 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:14:57,432 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:14:57,976 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:14:58,988 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:14:59,885 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:01,011 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:01,187 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:01,187 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:01,187 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:01,188 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:01,549 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:01,549 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:01,549 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:01,549 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:02,023 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:03,035 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:05,027 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:05,060 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:05,138 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:05,138 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:05,138 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:05,139 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:05,523 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:05,524 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:05,524 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:05,524 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:06,061 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:07,075 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:09,059 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:09,060 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:09,060 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:09,060 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:09,103 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:09,103 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:09,405 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:09,406 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:09,406 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:09,406 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:10,051 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:10,115 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:10,972 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:15:10,972 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:15:10,972 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:15:11,129 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\config.yaml
+2023-10-24 20:15:11,130 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:13,154 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:13,205 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:13,205 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:13,205 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:13,205 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:13,592 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:13,592 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:13,593 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:13,593 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:14,163 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:15,173 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:15,510 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:17,195 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:17,228 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:17,228 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:17,228 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:17,228 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:17,586 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:17,586 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:17,586 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:17,587 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:18,207 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:19,211 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:20,895 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:21,235 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:21,271 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:21,271 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:21,271 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:21,272 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:21,656 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:21,656 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:21,656 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:21,656 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:22,244 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:23,253 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:25,275 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:25,419 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:25,419 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:25,419 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:25,419 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:25,878 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:25,879 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:25,879 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:25,879 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:25,922 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:26,286 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:26,348 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:15:26,348 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:15:26,348 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:15:27,302 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:29,329 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:29,578 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:29,579 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:29,579 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:29,579 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:29,966 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:29,966 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:29,966 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:29,967 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:30,343 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:30,930 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:31,357 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:33,369 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:33,582 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:33,582 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:33,582 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:33,582 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:34,019 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:34,019 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:34,020 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:34,020 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:34,381 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:35,384 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:35,972 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:37,403 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:37,631 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:37,631 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:37,631 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:37,632 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:38,020 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:38,020 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:38,020 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:38,020 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:38,415 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:39,425 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:40,219 DEBUG   SystemMonitor:18152 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-10-24 20:15:40,220 DEBUG   SenderThread:18152 [sender.py:send():380] send: stats
+2023-10-24 20:15:41,296 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:41,448 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:41,521 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:15:41,522 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:15:41,522 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:15:41,631 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:41,715 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:41,715 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:41,716 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:41,984 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:41,985 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:41,985 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:41,985 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:42,459 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:43,473 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:45,490 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:45,827 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:45,827 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:45,827 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:45,827 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:46,270 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:46,270 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:46,270 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:46,270 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:46,354 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:46,490 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:47,506 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:49,520 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:49,942 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:49,943 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:49,943 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:49,945 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:50,382 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:50,383 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:50,383 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:50,383 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:50,530 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:51,372 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:51,539 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:53,552 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:53,999 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:54,000 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:54,000 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:54,000 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:54,357 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:54,358 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:54,358 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:54,358 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:54,553 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:55,564 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:56,740 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 20:15:56,740 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:15:56,741 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 20:15:56,932 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:15:57,591 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:15:58,051 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:58,051 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:58,051 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:58,052 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:58,478 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:15:58,479 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:15:58,479 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:15:58,479 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:15:58,606 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:15:59,619 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:01,647 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:02,046 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:16:02,159 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:16:02,159 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:16:02,159 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:16:02,160 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:16:02,618 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-24 20:16:02,618 DEBUG   SenderThread:18152 [sender.py:send():380] send: history
+2023-10-24 20:16:02,619 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: summary_record
+2023-10-24 20:16:02,619 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:16:02,666 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:16:02,730 DEBUG   SenderThread:18152 [sender.py:send():380] send: telemetry
+2023-10-24 20:16:02,734 DEBUG   SenderThread:18152 [sender.py:send():380] send: exit
+2023-10-24 20:16:02,735 INFO    SenderThread:18152 [sender.py:send_exit():585] handling exit code: 1
+2023-10-24 20:16:02,735 INFO    SenderThread:18152 [sender.py:send_exit():587] handling runtime: 82
+2023-10-24 20:16:02,735 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:16:02,735 INFO    SenderThread:18152 [sender.py:send_exit():593] send defer
+2023-10-24 20:16:02,735 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,735 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 0
+2023-10-24 20:16:02,736 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,736 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-10-24 20:16:02,736 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 1
+2023-10-24 20:16:02,736 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,736 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 1
+2023-10-24 20:16:02,736 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,736 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-10-24 20:16:02,736 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 2
+2023-10-24 20:16:02,737 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,737 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 2
+2023-10-24 20:16:02,737 INFO    HandlerThread:18152 [system_monitor.py:finish():203] Stopping system monitor
+2023-10-24 20:16:02,737 DEBUG   SystemMonitor:18152 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-10-24 20:16:02,747 DEBUG   SystemMonitor:18152 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-10-24 20:16:02,748 INFO    HandlerThread:18152 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-24 20:16:02,748 INFO    HandlerThread:18152 [interfaces.py:finish():202] Joined disk monitor
+2023-10-24 20:16:02,827 INFO    HandlerThread:18152 [interfaces.py:finish():202] Joined gpu monitor
+2023-10-24 20:16:02,827 INFO    HandlerThread:18152 [interfaces.py:finish():202] Joined memory monitor
+2023-10-24 20:16:02,828 INFO    HandlerThread:18152 [interfaces.py:finish():202] Joined network monitor
+2023-10-24 20:16:02,828 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,828 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-10-24 20:16:02,828 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 3
+2023-10-24 20:16:02,828 DEBUG   SenderThread:18152 [sender.py:send():380] send: stats
+2023-10-24 20:16:02,828 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,828 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 3
+2023-10-24 20:16:02,828 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,828 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-10-24 20:16:02,828 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 4
+2023-10-24 20:16:02,828 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,828 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 4
+2023-10-24 20:16:02,829 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,829 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-10-24 20:16:02,829 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 5
+2023-10-24 20:16:02,829 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,829 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 5
+2023-10-24 20:16:02,829 DEBUG   SenderThread:18152 [sender.py:send():380] send: summary
+2023-10-24 20:16:02,829 INFO    SenderThread:18152 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 20:16:02,829 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,829 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-10-24 20:16:02,829 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 6
+2023-10-24 20:16:02,830 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:02,830 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 6
+2023-10-24 20:16:02,830 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:02,830 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-10-24 20:16:02,831 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 20:16:03,142 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 7
+2023-10-24 20:16:03,142 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:03,142 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 7
+2023-10-24 20:16:03,142 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:03,142 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-10-24 20:16:03,668 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:16:03,668 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\config.yaml
+2023-10-24 20:16:03,668 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:03,761 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-24 20:16:04,681 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:05,690 INFO    Thread-16 :18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:05,833 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 8
+2023-10-24 20:16:05,833 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: poll_exit
+2023-10-24 20:16:05,833 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:05,833 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 8
+2023-10-24 20:16:05,834 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [job_builder.py:_get_source_type():404] no source found
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 9
+2023-10-24 20:16:05,834 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:05,834 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 9
+2023-10-24 20:16:05,834 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-10-24 20:16:05,834 INFO    SenderThread:18152 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-24 20:16:06,701 INFO    SenderThread:18152 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:06,701 INFO    SenderThread:18152 [dir_watcher.py:finish():388] scan: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files
+2023-10-24 20:16:06,701 INFO    SenderThread:18152 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\config.yaml config.yaml
+2023-10-24 20:16:06,701 INFO    SenderThread:18152 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log output.log
+2023-10-24 20:16:06,701 INFO    SenderThread:18152 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\requirements.txt requirements.txt
+2023-10-24 20:16:06,702 INFO    SenderThread:18152 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-metadata.json wandb-metadata.json
+2023-10-24 20:16:06,702 INFO    SenderThread:18152 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json wandb-summary.json
+2023-10-24 20:16:06,702 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 10
+2023-10-24 20:16:06,702 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:06,702 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 10
+2023-10-24 20:16:06,703 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:06,703 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-10-24 20:16:06,703 INFO    SenderThread:18152 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-24 20:16:07,012 INFO    wandb-upload_1:18152 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\output.log
+2023-10-24 20:16:07,287 INFO    wandb-upload_2:18152 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\requirements.txt
+2023-10-24 20:16:07,287 INFO    wandb-upload_0:18152 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\config.yaml
+2023-10-24 20:16:07,494 INFO    wandb-upload_3:18152 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\files\wandb-summary.json
+2023-10-24 20:16:07,699 INFO    Thread-15 (_thread_body):18152 [sender.py:transition_state():613] send defer: 11
+2023-10-24 20:16:07,699 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:07,699 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 11
+2023-10-24 20:16:07,700 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:07,700 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-10-24 20:16:07,700 INFO    SenderThread:18152 [file_pusher.py:join():181] waiting for file pusher
+2023-10-24 20:16:07,700 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 12
+2023-10-24 20:16:07,700 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:07,700 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 12
+2023-10-24 20:16:07,700 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:07,700 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-10-24 20:16:07,700 INFO    SenderThread:18152 [file_stream.py:finish():595] file stream finish called
+2023-10-24 20:16:08,006 INFO    SenderThread:18152 [file_stream.py:finish():599] file stream finish is done
+2023-10-24 20:16:08,006 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 13
+2023-10-24 20:16:08,006 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:08,006 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 13
+2023-10-24 20:16:08,006 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:08,006 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-10-24 20:16:08,006 INFO    SenderThread:18152 [sender.py:transition_state():613] send defer: 14
+2023-10-24 20:16:08,006 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 20:16:08,006 INFO    HandlerThread:18152 [handler.py:handle_request_defer():172] handle defer: 14
+2023-10-24 20:16:08,006 DEBUG   SenderThread:18152 [sender.py:send():380] send: final
+2023-10-24 20:16:08,006 DEBUG   SenderThread:18152 [sender.py:send():380] send: footer
+2023-10-24 20:16:08,006 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: defer
+2023-10-24 20:16:08,006 INFO    SenderThread:18152 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-10-24 20:16:08,007 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-24 20:16:08,007 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: server_info
+2023-10-24 20:16:08,007 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: get_summary
+2023-10-24 20:16:08,007 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: sampled_history
+2023-10-24 20:16:08,007 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 20:16:08,007 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: poll_exit
+2023-10-24 20:16:08,007 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: server_info
+2023-10-24 20:16:08,008 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: job_info
+2023-10-24 20:16:08,086 DEBUG   SenderThread:18152 [sender.py:send_request():407] send_request: job_info
+2023-10-24 20:16:08,086 INFO    MainThread:18152 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-10-24 20:16:08,086 INFO    MainThread:18152 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-10-24 20:16:08,087 INFO    MainThread:18152 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-10-24 20:16:08,087 DEBUG   HandlerThread:18152 [handler.py:handle_request():146] handle_request: shutdown
+2023-10-24 20:16:08,087 INFO    HandlerThread:18152 [handler.py:finish():866] shutting down handler
+2023-10-24 20:16:09,015 INFO    WriterThread:18152 [datastore.py:close():294] close: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_201439-db7bftw1\run-db7bftw1.wandb
+2023-10-24 20:16:09,092 INFO    SenderThread:18152 [sender.py:finish():1534] shutting down sender
+2023-10-24 20:16:09,092 INFO    SenderThread:18152 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-24 20:16:09,092 INFO    SenderThread:18152 [file_pusher.py:join():181] waiting for file pusher

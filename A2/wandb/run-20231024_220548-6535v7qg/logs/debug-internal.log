@@ -1,0 +1,174 @@
+2023-10-24 22:05:48,290 INFO    StreamThr :3076 [internal.py:wandb_internal():86] W&B internal server running at pid: 3076, started at: 2023-10-24 22:05:48.290995
+2023-10-24 22:05:48,292 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: status
+2023-10-24 22:05:48,293 INFO    WriterThread:3076 [datastore.py:open_for_write():85] open: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\run-6535v7qg.wandb
+2023-10-24 22:05:48,295 DEBUG   SenderThread:3076 [sender.py:send():380] send: header
+2023-10-24 22:05:48,339 DEBUG   SenderThread:3076 [sender.py:send():380] send: run
+2023-10-24 22:05:48,841 INFO    SenderThread:3076 [dir_watcher.py:__init__():211] watching files in: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files
+2023-10-24 22:05:48,842 INFO    SenderThread:3076 [sender.py:_start_run_threads():1122] run started: 6535v7qg with start time 1698210348.290995
+2023-10-24 22:05:48,848 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: check_version
+2023-10-24 22:05:48,848 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: check_version
+2023-10-24 22:05:49,524 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: run_start
+2023-10-24 22:05:49,556 DEBUG   HandlerThread:3076 [system_info.py:__init__():32] System info init
+2023-10-24 22:05:49,556 DEBUG   HandlerThread:3076 [system_info.py:__init__():47] System info init done
+2023-10-24 22:05:49,556 INFO    HandlerThread:3076 [system_monitor.py:start():194] Starting system monitor
+2023-10-24 22:05:49,556 INFO    SystemMonitor:3076 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-10-24 22:05:49,556 INFO    HandlerThread:3076 [system_monitor.py:probe():214] Collecting system info
+2023-10-24 22:05:49,562 INFO    SystemMonitor:3076 [interfaces.py:start():190] Started cpu monitoring
+2023-10-24 22:05:49,563 INFO    SystemMonitor:3076 [interfaces.py:start():190] Started disk monitoring
+2023-10-24 22:05:49,563 INFO    SystemMonitor:3076 [interfaces.py:start():190] Started gpu monitoring
+2023-10-24 22:05:49,571 INFO    SystemMonitor:3076 [interfaces.py:start():190] Started memory monitoring
+2023-10-24 22:05:49,582 INFO    SystemMonitor:3076 [interfaces.py:start():190] Started network monitoring
+2023-10-24 22:05:49,585 DEBUG   HandlerThread:3076 [system_info.py:probe():196] Probing system
+2023-10-24 22:05:49,586 DEBUG   HandlerThread:3076 [system_info.py:_probe_git():181] Probing git
+2023-10-24 22:05:49,685 DEBUG   HandlerThread:3076 [system_info.py:_probe_git():189] Probing git done
+2023-10-24 22:05:49,685 DEBUG   HandlerThread:3076 [system_info.py:probe():244] Probing system done
+2023-10-24 22:05:49,685 DEBUG   HandlerThread:3076 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.5', 'heartbeatAt': '2023-10-25T05:05:49.585600', 'startedAt': '2023-10-25T05:05:48.284997', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py', 'codePathLocal': 'assignment_2\\train.py', 'codePath': 'A2\\assignment_2\\train.py', 'git': {'remote': None, 'commit': 'fa3af39974944fc0ed5d83891ebdc7e89310fb28'}, 'email': 'wenhewangcrane@gmail.com', 'root': 'C:/Users/Alienware/Desktop/VC CMPT742', 'host': 'wenhe', 'username': 'Alienware', 'executable': 'C:\\Users\\Alienware\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2200.0, 'min': 0.0, 'max': 2200.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 0.0, 'max': 2200.0}], 'disk': {'/': {'total': 931.1415977478027, 'used': 162.5786018371582}}, 'gpu': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'memory_total': 12878610432}], 'memory': {'total': 63.76631164550781}}
+2023-10-24 22:05:49,685 INFO    HandlerThread:3076 [system_monitor.py:probe():224] Finished collecting system info
+2023-10-24 22:05:49,685 INFO    HandlerThread:3076 [system_monitor.py:probe():227] Publishing system info
+2023-10-24 22:05:49,685 DEBUG   HandlerThread:3076 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-24 22:05:49,686 DEBUG   HandlerThread:3076 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-24 22:05:49,686 INFO    HandlerThread:3076 [system_monitor.py:probe():229] Finished publishing system info
+2023-10-24 22:05:49,689 DEBUG   SenderThread:3076 [sender.py:send():380] send: files
+2023-10-24 22:05:49,689 INFO    SenderThread:3076 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-24 22:05:49,693 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-24 22:05:49,693 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: stop_status
+2023-10-24 22:05:49,694 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 22:05:49,844 INFO    Thread-16 :3076 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\requirements.txt
+2023-10-24 22:05:49,844 INFO    Thread-16 :3076 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\wandb-metadata.json
+2023-10-24 22:05:50,055 DEBUG   SenderThread:3076 [sender.py:send():380] send: telemetry
+2023-10-24 22:05:50,057 DEBUG   SenderThread:3076 [sender.py:send():380] send: exit
+2023-10-24 22:05:50,057 INFO    SenderThread:3076 [sender.py:send_exit():585] handling exit code: 1
+2023-10-24 22:05:50,057 INFO    SenderThread:3076 [sender.py:send_exit():587] handling runtime: 0
+2023-10-24 22:05:50,057 INFO    SenderThread:3076 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 22:05:50,057 INFO    SenderThread:3076 [sender.py:send_exit():593] send defer
+2023-10-24 22:05:50,058 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,058 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 0
+2023-10-24 22:05:50,058 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,058 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-10-24 22:05:50,058 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 1
+2023-10-24 22:05:50,058 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,058 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 1
+2023-10-24 22:05:50,058 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,058 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-10-24 22:05:50,058 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 2
+2023-10-24 22:05:50,059 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,059 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 2
+2023-10-24 22:05:50,059 INFO    HandlerThread:3076 [system_monitor.py:finish():203] Stopping system monitor
+2023-10-24 22:05:50,059 INFO    HandlerThread:3076 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-24 22:05:50,066 INFO    HandlerThread:3076 [interfaces.py:finish():202] Joined disk monitor
+2023-10-24 22:05:50,066 DEBUG   SystemMonitor:3076 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-10-24 22:05:50,067 DEBUG   SystemMonitor:3076 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-10-24 22:05:50,067 DEBUG   SystemMonitor:3076 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-10-24 22:05:50,112 INFO    HandlerThread:3076 [interfaces.py:finish():202] Joined gpu monitor
+2023-10-24 22:05:50,113 INFO    HandlerThread:3076 [interfaces.py:finish():202] Joined memory monitor
+2023-10-24 22:05:50,113 INFO    HandlerThread:3076 [interfaces.py:finish():202] Joined network monitor
+2023-10-24 22:05:50,113 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,113 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-10-24 22:05:50,113 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 3
+2023-10-24 22:05:50,113 DEBUG   SenderThread:3076 [sender.py:send():380] send: stats
+2023-10-24 22:05:50,113 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,113 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 3
+2023-10-24 22:05:50,113 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,114 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-10-24 22:05:50,114 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 4
+2023-10-24 22:05:50,114 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,114 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 4
+2023-10-24 22:05:50,114 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,114 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-10-24 22:05:50,114 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 5
+2023-10-24 22:05:50,114 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,114 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 5
+2023-10-24 22:05:50,114 DEBUG   SenderThread:3076 [sender.py:send():380] send: summary
+2023-10-24 22:05:50,114 INFO    SenderThread:3076 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-24 22:05:50,115 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,115 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-10-24 22:05:50,115 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 6
+2023-10-24 22:05:50,115 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,115 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 6
+2023-10-24 22:05:50,115 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,115 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-10-24 22:05:50,116 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: status_report
+2023-10-24 22:05:50,241 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 7
+2023-10-24 22:05:50,241 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:50,241 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 7
+2023-10-24 22:05:50,241 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:50,242 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-10-24 22:05:50,304 INFO    wandb-upload_0:3076 [upload_job.py:push():131] Uploaded file C:\Users\ALIENW~1\AppData\Local\Temp\tmpjlms3ttlwandb\8ihs4myv-wandb-metadata.json
+2023-10-24 22:05:50,856 INFO    Thread-16 :3076 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\config.yaml
+2023-10-24 22:05:50,856 INFO    Thread-16 :3076 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\wandb-summary.json
+2023-10-24 22:05:50,856 INFO    Thread-16 :3076 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\output.log
+2023-10-24 22:05:50,996 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-24 22:05:52,061 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 8
+2023-10-24 22:05:52,061 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: poll_exit
+2023-10-24 22:05:52,061 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:52,061 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 8
+2023-10-24 22:05:52,061 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [job_builder.py:_get_source_type():404] no source found
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 9
+2023-10-24 22:05:52,062 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:52,062 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 9
+2023-10-24 22:05:52,062 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-10-24 22:05:52,062 INFO    SenderThread:3076 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-24 22:05:52,874 INFO    SenderThread:3076 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\output.log
+2023-10-24 22:05:52,875 INFO    SenderThread:3076 [dir_watcher.py:finish():388] scan: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files
+2023-10-24 22:05:52,875 INFO    SenderThread:3076 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\config.yaml config.yaml
+2023-10-24 22:05:52,875 INFO    SenderThread:3076 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\output.log output.log
+2023-10-24 22:05:52,876 INFO    SenderThread:3076 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\requirements.txt requirements.txt
+2023-10-24 22:05:52,877 INFO    SenderThread:3076 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\wandb-metadata.json wandb-metadata.json
+2023-10-24 22:05:52,878 INFO    SenderThread:3076 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\wandb-summary.json wandb-summary.json
+2023-10-24 22:05:52,880 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 10
+2023-10-24 22:05:52,881 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:52,881 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 10
+2023-10-24 22:05:52,882 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:52,882 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-10-24 22:05:52,882 INFO    SenderThread:3076 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-24 22:05:53,153 INFO    wandb-upload_1:3076 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\output.log
+2023-10-24 22:05:53,435 INFO    wandb-upload_0:3076 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\config.yaml
+2023-10-24 22:05:53,539 INFO    wandb-upload_3:3076 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\wandb-summary.json
+2023-10-24 22:05:53,763 INFO    wandb-upload_2:3076 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\files\requirements.txt
+2023-10-24 22:05:53,974 INFO    Thread-15 (_thread_body):3076 [sender.py:transition_state():613] send defer: 11
+2023-10-24 22:05:53,974 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:53,974 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 11
+2023-10-24 22:05:53,974 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:53,974 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-10-24 22:05:53,974 INFO    SenderThread:3076 [file_pusher.py:join():181] waiting for file pusher
+2023-10-24 22:05:53,974 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 12
+2023-10-24 22:05:53,974 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:53,974 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 12
+2023-10-24 22:05:53,974 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:53,975 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-10-24 22:05:53,975 INFO    SenderThread:3076 [file_stream.py:finish():595] file stream finish called
+2023-10-24 22:05:54,094 INFO    SenderThread:3076 [file_stream.py:finish():599] file stream finish is done
+2023-10-24 22:05:54,094 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 13
+2023-10-24 22:05:54,094 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:54,094 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 13
+2023-10-24 22:05:54,094 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:54,094 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-10-24 22:05:54,094 INFO    SenderThread:3076 [sender.py:transition_state():613] send defer: 14
+2023-10-24 22:05:54,094 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: defer
+2023-10-24 22:05:54,094 INFO    HandlerThread:3076 [handler.py:handle_request_defer():172] handle defer: 14
+2023-10-24 22:05:54,094 DEBUG   SenderThread:3076 [sender.py:send():380] send: final
+2023-10-24 22:05:54,094 DEBUG   SenderThread:3076 [sender.py:send():380] send: footer
+2023-10-24 22:05:54,094 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: defer
+2023-10-24 22:05:54,094 INFO    SenderThread:3076 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: server_info
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: get_summary
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: sampled_history
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-24 22:05:54,095 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: poll_exit
+2023-10-24 22:05:54,095 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: server_info
+2023-10-24 22:05:54,095 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: job_info
+2023-10-24 22:05:54,180 DEBUG   SenderThread:3076 [sender.py:send_request():407] send_request: job_info
+2023-10-24 22:05:54,181 INFO    MainThread:3076 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-10-24 22:05:54,181 INFO    MainThread:3076 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-10-24 22:05:54,181 INFO    MainThread:3076 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-10-24 22:05:54,181 DEBUG   HandlerThread:3076 [handler.py:handle_request():146] handle_request: shutdown
+2023-10-24 22:05:54,181 INFO    HandlerThread:3076 [handler.py:finish():866] shutting down handler
+2023-10-24 22:05:55,105 INFO    WriterThread:3076 [datastore.py:close():294] close: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231024_220548-6535v7qg\run-6535v7qg.wandb
+2023-10-24 22:05:55,183 INFO    SenderThread:3076 [sender.py:finish():1534] shutting down sender
+2023-10-24 22:05:55,183 INFO    SenderThread:3076 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-24 22:05:55,183 INFO    SenderThread:3076 [file_pusher.py:join():181] waiting for file pusher

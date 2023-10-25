@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 94, in <module>
+    loss = criterion(pred, label)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: only batches of spatial targets supported (3D tensors) but got targets of size: : [4, 1, 280, 572]

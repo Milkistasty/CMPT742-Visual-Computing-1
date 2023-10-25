@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 87, in <module>
+    pred = model(image)
+           ^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1538, in _call_impl
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\model.py", line 106, in forward
+    x = self.up3(x_middle, x_before_pool4)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\model.py", line 66, in forward
+    x = torch.cat([x, skip_connection], dim=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 70 but got size 71 for tensor number 1 in the list.

@@ -1,0 +1,1 @@
+{"device": "cuda:0", "_timestamp": 1698210485.0196362, "_runtime": 82.89694404602051, "_step": 40, "Training Loss": 4.030018850850562e-05, "Validation Accuracy": 1.0, "Validation Loss": 3.5843624573317356e-05, "_wandb": {"runtime": 82}}

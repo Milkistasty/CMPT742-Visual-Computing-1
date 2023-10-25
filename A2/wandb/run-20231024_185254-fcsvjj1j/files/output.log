@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 83, in <module>
+    pred = model(image)
+           ^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1538, in _call_impl
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\model.py", line 97, in forward
+    x1, x_before_pool1 = self.down1(x)
+                         ^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\model.py", line 41, in forward
+    x_before_pool = self.conv_block(x)
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\model.py", line 22, in forward
+    x = self.conv1(x)
+        ^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [4, 1, 1, 572, 572]
