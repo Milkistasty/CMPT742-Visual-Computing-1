@@ -17,9 +17,9 @@ os.environ["WANDB_DISABLE_SYMLINKS"] = "true"
 # Paramteres
 
 # learning rate
-lr = 1e-2
+lr = 1e-3
 # number of training epochs
-epoch_n = 5
+epoch_n = 20
 # input image-mask size
 image_size = 572
 # root directory of project
@@ -32,7 +32,7 @@ load = False
 gpu = True
 # hyperparam for SGD
 # prevent the optimizer from getting stuck in local minima and to speed up convergence
-momentum = 0.99
+betas = (0.9, 0.999)
 # hyperparam for SGD
 # L2 regularization. It helps prevent overfitting by adding a penalty to the magnitude of the weights
 weight_decay = 0.0005
@@ -49,7 +49,7 @@ wandb.init(
     "image_size": image_size,
     "batch_size": batch_size,
     "gpu": gpu,
-    "momentum": momentum,
+    "betas": betas,
     "weight_decay": weight_decay
     }
 )
@@ -58,7 +58,7 @@ wandb.init(
 data_dir = os.path.join(root_dir, 'data/cells')
 
 # 2. Split into train / validation partitions and Create data loaders
-trainset = Cell_data(data_dir=data_dir, size=image_size)
+trainset = Cell_data(data_dir=data_dir, size=image_size, train=True)
 trainloader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
 
 testset = Cell_data(data_dir=data_dir, size=image_size, train=False)
@@ -68,7 +68,9 @@ testloader = DataLoader(testset, batch_size=batch_size)
 device = torch.device('cuda:0' if gpu else 'cpu')
 wandb.log({"device": str(device)})
 
+# initialize the model to UNet
 model = UNet().to(device)
+
 # (Initialize logging)
 wandb.watch(model, log="all")  # Watch model for logging all gradients and parameters
 
@@ -79,28 +81,24 @@ if load:
 # 4. Set up the optimizer, the loss, the learning rate scheduler and the loss scaling for AMP
 criterion = nn.CrossEntropyLoss()
 
-# Change the optimizer to SGD
-optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+# set the optimizer as Adam
+optimizer = optim.Adam(model.parameters(), lr=lr, betas=betas, weight_decay=weight_decay)
 
 # 5. Begin training
 for e in range(epoch_n):
     # init the loss to 0 for each epoch
     epoch_loss = 0
     model.train()
-    # print("now it is train round")
 
-    # training round
+    # Training round
     for i, data in enumerate(trainloader):
         image, label = data
 
         image = image.to(device)
         label = label.squeeze(1).long().to(device)
 
-        # print(f"Image tensor shape before model call: {image.shape}")
-
         pred = model(image)
 
-        # print(f"Predicted output shape: {pred.shape}")
         crop_x = (label.shape[1] - pred.shape[2]) // 2
         crop_y = (label.shape[2] - pred.shape[3]) // 2
 
@@ -130,8 +128,6 @@ for e in range(epoch_n):
     correct = 0
     total_loss = 0
 
-    # print("now it is eval round")
-
     # Evaluation round
     with torch.no_grad():
         for i, data in enumerate(testloader):
@@ -156,7 +152,8 @@ for e in range(epoch_n):
 
         print('Accuracy: %.4f ---- Loss: %.4f' % (correct / total, total_loss / testset.__len__()))
         # Log validation loss and accuracy to W&B
-        wandb.log({"Validation Accuracy": correct / total, "Validation Loss": total_loss / testset.__len__()})
+        wandb.log({"Validation Accuracy": correct / total, 
+                   "Validation Loss": total_loss / testset.__len__()})
 
 torch.save(model.state_dict(), 'checkpoint.pt')
 wandb.save('checkpoint.pt')

@@ -9,11 +9,10 @@ import random
 from PIL import Image, ImageOps
 
 #import any other libraries you need below this line
-from scipy.ndimage import map_coordinates
 from scipy.ndimage.filters import gaussian_filter
 
 class Cell_data(Dataset):
-    def __init__(self, data_dir, size, train='True', train_test_split=0.8, augment_data=True):
+    def __init__(self, data_dir, size, train, train_test_split=0.8, augment_data=True):
         ##########################inputs##################################
         # data_dir(string) - directory of the data#########################
         # size(int) - size of the images you want to use###################
@@ -31,7 +30,7 @@ class Cell_data(Dataset):
         # List all files in the respective directories
         image_files = sorted([os.path.join(image_dir, f) for f in os.listdir(image_dir) if f.endswith('.bmp')])
         mask_files = sorted([os.path.join(mask_dir, f) for f in os.listdir(mask_dir) if f.endswith('.bmp')])
-        
+
         # Split into train and test datasets
         split_idx = int(len(image_files) * train_test_split)
         
@@ -54,9 +53,6 @@ class Cell_data(Dataset):
 
         image = Image.open(image_path).resize((self.size, self.size)).convert('L')  # Grayscale
         mask = Image.open(mask_path).resize((self.size, self.size)).convert('L')
-
-        # Print shape after loading and resizing
-        # print("Shape after opening and resizing:", torch.tensor(np.array(image)).shape)
 
         # data augmentation part
         if self.augment_data:
@@ -128,17 +124,14 @@ class Cell_data(Dataset):
                 image = Image.fromarray((image.numpy() * 255).astype(np.uint8))  # Convert back to [0, 255]
                 mask = Image.fromarray((mask.numpy() * 255).astype(np.uint8))
 
-        # Print shape after data augmentation
-        # print("Shape after data augmentation:", torch.tensor(np.array(image)).shape)
-
         # todo
         # return image and mask in tensors
         # Convert to tensor and normalize
         image = torch.tensor(np.array(image, dtype=np.float32)).unsqueeze(0) / 255.0
         mask = torch.tensor(np.array(mask, dtype=np.float32)).unsqueeze(0) / 255.0
 
-        # Print final shape
-        # print("Final shape:", image.shape)
+        # Threshold the mask to ensure values are strictly 0 and 1
+        mask = (mask > 0).float()
 
         return image, mask
 
