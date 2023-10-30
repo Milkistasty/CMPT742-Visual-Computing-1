@@ -17,15 +17,15 @@ os.environ["WANDB_DISABLE_SYMLINKS"] = "true"
 # Paramteres
 
 # learning rate
-lr = 1e-3
+lr = 1e-5
 # number of training epochs
-epoch_n = 20
+epoch_n = 5
 # input image-mask size
-image_size = 572
+image_size = 576
 # root directory of project
 root_dir = os.getcwd()
 # training batch size
-batch_size = 4
+batch_size = 2
 # use checkpoint model for training
 load = False
 # use GPU for training
@@ -35,7 +35,7 @@ gpu = True
 betas = (0.9, 0.999)
 # hyperparam for SGD
 # L2 regularization. It helps prevent overfitting by adding a penalty to the magnitude of the weights
-weight_decay = 0.0005
+weight_decay = 1e-8
 
 # Initialize W&B for logging
 wandb.init(
@@ -58,18 +58,18 @@ wandb.init(
 data_dir = os.path.join(root_dir, 'data/cells')
 
 # 2. Split into train / validation partitions and Create data loaders
-trainset = Cell_data(data_dir=data_dir, size=image_size, train=True)
+trainset = Cell_data(data_dir=data_dir, size=image_size, train=True, augment_data=True)
 trainloader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
 
-testset = Cell_data(data_dir=data_dir, size=image_size, train=False)
+testset = Cell_data(data_dir=data_dir, size=image_size, train=False, augment_data=False)
 testloader = DataLoader(testset, batch_size=batch_size)
 
 # set up devices for training
-device = torch.device('cuda:0' if gpu else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 wandb.log({"device": str(device)})
 
 # initialize the model to UNet
-model = UNet().to(device)
+model = UNet(n_channels=1, n_classes=2).to(device)
 
 # (Initialize logging)
 wandb.watch(model, log="all")  # Watch model for logging all gradients and parameters
@@ -186,8 +186,10 @@ fig, axes = plt.subplots(testset.__len__(), 2, figsize = (20, 20))
 for i in range(testset.__len__()):
   axes[i, 0].imshow(output_labels[i].squeeze())
   axes[i, 0].axis('off')
+  axes[i, 0].set_title("Output Label for Image {}".format(i+1))
   axes[i, 1].imshow(output_masks[i].squeeze())
   axes[i, 1].axis('off')
+  axes[i, 1].set_title("Output Mask for Image {}".format(i+1))
 
 plt.show()
 

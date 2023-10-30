@@ -12,35 +12,28 @@ UNET model settings refers to https://github.com/milesial/Pytorch-UNet/tree/mast
 class twoConvBlock(nn.Module):
   def __init__(self, input_channel, output_channel):
     super(twoConvBlock, self).__init__()
-    #todo
     #initialize the block
-    self.conv1 = nn.Conv2d(input_channel, output_channel, kernel_size=3, padding=1)
-    self.relu1 = nn.ReLU(inplace=True)
-    self.conv2 = nn.Conv2d(output_channel, output_channel, kernel_size=3, padding=1)
-    self.bn = nn.BatchNorm2d(output_channel)
-    self.relu2 = nn.ReLU(inplace=True)
+    self.double_conv = nn.Sequential(
+        nn.Conv2d(input_channel, output_channel, kernel_size=3, padding=1, bias=False),
+        nn.ReLU(inplace=True),
+        nn.Conv2d(output_channel, output_channel, kernel_size=3, padding=1, bias=False),
+        nn.BatchNorm2d(output_channel),
+        nn.ReLU(inplace=True)
+    )
 
   def forward(self, x):
-    #todo
     #implement the forward path
-    x = self.conv1(x)
-    x = self.relu1(x)
-    x = self.conv2(x)
-    x = self.bn(x)
-    x = self.relu2(x)
-    return x
+    return self.double_conv(x)
 
 # Part 2: The contracting path
 class downStep(nn.Module):
   def __init__(self, input_channel, output_channel):
     super(downStep, self).__init__()
-    #todo
     #initialize the down path
     self.conv_block = twoConvBlock(input_channel, output_channel)
-    self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+    self.pool = nn.MaxPool2d(kernel_size=2)
 
   def forward(self, x):
-    #todo
     #implement the forward path
     x_before_pool = self.conv_block(x)
     x = self.pool(x_before_pool)
@@ -59,7 +52,6 @@ def center_crop(tensor, target_size):
 class upStep(nn.Module):
   def __init__(self, input_channel, output_channel):
     super(upStep, self).__init__()
-    #todo
     #initialize the up path
     # Upsampling using transposed convolution
     self.upsample = nn.ConvTranspose2d(input_channel, output_channel, kernel_size=2, stride=2)
@@ -69,7 +61,6 @@ class upStep(nn.Module):
     self.conv_block = twoConvBlock(2*output_channel, output_channel)
 
   def forward(self, x, skip_connection):
-    #todo
     #implement the forward path
     x = self.upsample(x)
     
@@ -83,12 +74,13 @@ class upStep(nn.Module):
     return x
 
 class UNet(nn.Module):
-  def __init__(self):
+  def __init__(self, n_channels, n_classes):
     super(UNet, self).__init__()
-    #todo
+    self.n_channels = n_channels
+    self.n_classes = n_classes
     #initialize the complete model
     # Contracting Path
-    self.down1 = downStep(1, 64)
+    self.down1 = downStep(n_channels, 64)
     self.down2 = downStep(64, 128)
     self.down3 = downStep(128, 256)
     self.down4 = downStep(256, 512)
@@ -103,10 +95,9 @@ class UNet(nn.Module):
     self.up1 = upStep(128, 64)
 
     # Final 1x1 convolution to map to desired output n classes (in this case, 2)
-    self.final_conv = nn.Conv2d(64, 2, kernel_size=1, padding=2)
+    self.final_conv = nn.Conv2d(64, n_classes, kernel_size=1)
 
   def forward(self, x):
-    #todo
     #implement the forward path
     # Contracting Path
     # print(f"Input shape to UNet: {x.shape}")

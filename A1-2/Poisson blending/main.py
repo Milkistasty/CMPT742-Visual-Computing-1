@@ -5,6 +5,9 @@ from scipy.sparse.linalg import spsolve
 
 from align_target import align_target
 
+
+# for poisson blending, we need to change the boundary condition for A matrix
+
 def poisson_blend(source_image, target_image, target_mask):
     #source_image: image to be cloned
     #target_image: image to be cloned into
@@ -13,7 +16,9 @@ def poisson_blend(source_image, target_image, target_mask):
     # Compute the Laplacian of the source image
     # if use cv2.laplacian will need to compute 3 channel seperately and combine them in the end
     laplacian_source = cv2.Laplacian(source_image, cv2.CV_64F)
-    
+    cv2.imshow("Laplacian", laplacian_source)
+    cv2.waitKey(0)
+
     # Indices of the mask where it is non-zero
     mask_indices = np.where(target_mask > 0)
     
@@ -29,36 +34,53 @@ def poisson_blend(source_image, target_image, target_mask):
     # Create A as a sparse matrix
     A = lil_matrix((num_pixels, num_pixels))
     
-    # Create a mapping from (x, y) coordinates to index in A and b
-    coord_to_idx = {(x,y): idx for idx, (x,y) in enumerate(zip(mask_indices[1], mask_indices[0]))}
+    height, width = target_mask.shape
 
     # Setting up the linear system of equations for Poisson blending based on the Laplacian
     # Fill in matrix A
+    # For pixels inside the mask and not on the boundary: 
+    # The Laplacian from the source image is used, and the matrix 
+    # A is set up based on neighbors inside the mask
+    # For pixels on the boundary of the mask: 
+    # The corresponding row in A is set to an identity row, 
+    # and b is set to the value from the target image for that pixel
     for idx, (y, x) in enumerate(zip(mask_indices[0], mask_indices[1])):
-        A[idx, idx] = 4
-        # Check each neighbor
+        boundary_pixel = False
         for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
             nx, ny = x + dx, y + dy
-            if (ny, nx) in coord_to_idx:
-                A[idx, coord_to_idx[(ny, nx)]] = -1
+            if nx < 0 or nx >= width or ny < 0 or ny >= height or target_mask[ny, nx] == 0:
+                boundary_pixel = True
+                break
+
+        if boundary_pixel:
+            A[idx, idx] = 1
+        else:
+            A[idx, idx] = 4
+            neighbors = [(y+dy, x+dx) for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]]
+            for ny, nx in neighbors:
+                neighbor_idx = np.where((mask_indices[0] == ny) & (mask_indices[1] == nx))[0]
+                A[idx, neighbor_idx] = -1
 
     # Split the channels
-    target_channels = cv2.split(target_image)
+    target_channels = cv2.split(source_image)
     # Initialize blended_channels with target_image
-    blended_channels = cv2.split(target_image.copy())
+    blended_channels = cv2.split(source_image.copy())
 
     # Iterate over each channel
-    for channel in range(3):  # Assuming RGB image
+    for channel in range(3):
         b = np.zeros(num_pixels)
         for idx, (y, x) in enumerate(zip(mask_indices[0], mask_indices[1])):
-            b[idx] = laplacian_source[y, x, channel]
+            boundary_pixel = False
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 nx, ny = x + dx, y + dy
-                if not (ny, nx) in coord_to_idx:
-                    # if any surrounding neibors are not in the mask, 
-                    # then it's the boundary of mask
-                    # add the target color into the the laplacian of source 
-                    b[idx] += target_channels[channel][ny, nx]
+                if nx < 0 or nx >= width or ny < 0 or ny >= height or target_mask[ny, nx] == 0:
+                    boundary_pixel = True
+                    break
+
+            if boundary_pixel:
+                b[idx] = target_channels[channel][y, x]
+            else:
+                b[idx] = laplacian_source[y, x, channel]
                     
         # Convert A to CSR format before solving
         A = A.tocsr()
@@ -80,7 +102,7 @@ def poisson_blend(source_image, target_image, target_mask):
 
 if __name__ == '__main__':
     #read source and target images
-    source_path = 'source2.jpg'
+    source_path = 'source1.jpg'
     target_path = 'target.jpg'
     source_image = cv2.imread(source_path)
     target_image = cv2.imread(target_path)
@@ -90,5 +112,11 @@ if __name__ == '__main__':
 
     ##poisson blend
     blended_image, least_square_error = poisson_blend(im_source, target_image, mask)
-    cv2.imwrite('blended_image_2.jpg', blended_image)
+    # cv2.imwrite('blended_image_2.jpg', blended_image)
     print("Least Squares Error:", least_square_error)
+
+    cv2.imshow('blended_image_2.jpg', blended_image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+    

@@ -3,7 +3,6 @@ import numpy as np
 
 from external_energy import *
 from internal_energy_matrix import *
-from scipy.ndimage import convolve
 
 """
     1. Define what is internal energy
@@ -156,20 +155,22 @@ if __name__ == '__main__':
     sigma2 = 1  # sigma used to calculate the gradient for the term energy
     sigma3 = 1  # sigma used to calculate the gradient of the external energy
     w_line = 0.5  # weighting for line energy
-    w_edge = 0.5  # weighting for edge energy
-    w_term = 2.5  # weighting for term energy
+    w_edge = 2.5  # weighting for edge energy
+    w_term = 0.5  # weighting for term energy
     num_iterations = 100  # number of iterations for energy minimization
-    maxPixelMove = 5  # number of max pixel movement allowed for each point
+    # maxPixelMove = 5  # number of max pixel movement allowed for each point
 
     # Get Internal Energy                                 
     M = get_matrix(alpha, beta, gamma, num_points)
 
     # Get external energy
-    E = external_energy(img, w_line, w_edge, w_term, sigma1, sigma2)
+    E = external_energy(img, w_line, w_edge, w_term)
+    # Blur the external energy again
+    E = cv2.GaussianBlur(E, blur_size, 0)
  
     # Compute the gradients of External Energy
-    gradient_x = convolve(E, gaussian_derivative_filter(sigma3, 'x'), mode='reflect') 
-    gradient_y = convolve(E, gaussian_derivative_filter(sigma3, 'y'), mode='reflect') 
+    gradient_x = cv2.Sobel(E, cv2.CV_64F, 1, 0, ksize=3)
+    gradient_y = cv2.Sobel(E, cv2.CV_64F, 0, 1, ksize=3)
                    
     # Check images for gradients and External Energy
     cv2.imshow("External Energy", E)
@@ -198,25 +199,6 @@ if __name__ == '__main__':
         # Update the new xt and yt using the optimization equation
         xt = M @ (gamma * xt - kappa * fx)
         yt = M @ (gamma * yt - kappa * fy)
-
-        # Maximum pixel move sets a cap on the maximum amount of pixels that one step can take.
-        # This is useful if one needs to prevent the snake from jumping past the location minimum one desires.
-        # In many cases, it is better to leave it off to increase the speed of the algorithm
-
-        # Calculated by getting the xt and yt delta from the new points to previous points
-        # Then get the angle of change and apply maxPixelMove magnitude
-        # Otherwise, if no maximum pixel move is set then set the xt/yt to be xt_New/yt_New
-        # Retrieved at: https://github.com/addisonElliott/active-contours/blob/master/snake.py#L180
-        # if maxPixelMove:
-        #     dx = maxPixelMove * np.tanh(xt_new - xt)
-        #     dy = maxPixelMove * np.tanh(yt_new - yt)
-
-        #     # Update the snake's points
-        #     xt += dx
-        #     yt += dy
-        # else:
-        #     xt = xt_new
-        #     yt = yt_new
    
         # Clipping xt and yt ensures that the snake's coordinates don't move outside the image boundaries
         xt = np.clip(xt, 0, img.shape[1] - 1)
