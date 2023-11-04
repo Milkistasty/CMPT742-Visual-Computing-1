@@ -1,1 +1,0 @@
-{"device": "cuda", "_timestamp": 1699128643.910158, "_runtime": 68.09964179992676, "_step": 4, "Training Loss": 0.3107013869853247, "Validation Accuracy": 0.8358968098958334, "Validation Loss": 0.2477857507765293}
