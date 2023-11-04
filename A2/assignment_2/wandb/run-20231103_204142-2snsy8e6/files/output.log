@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 61, in <module>
+    trainset = Cell_data(data_dir=data_dir, size=image_size, train=True, augment_data=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\dataloader.py", line 32, in __init__
+    image_files = sorted([os.path.join(image_dir, f) for f in os.listdir(image_dir) if f.endswith('.bmp')])
+                                                              ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\data/cells\\scans'

@@ -7,6 +7,7 @@ UNET model settings refers to https://github.com/milesial/Pytorch-UNet/tree/mast
 """
 
 #import any other libraries you need below this line
+from torchvision.transforms.functional import center_crop as CenterCrop
 
 # Part 1: The Convolutional blocks
 class twoConvBlock(nn.Module):
@@ -40,14 +41,6 @@ class downStep(nn.Module):
     # return both the output after the convolutions and after the pooling
     return x, x_before_pool
 
-# Before concatenating the skip connection with the upsampled tensor, 
-# center-crop the skip connection to match the size of the upsampled tensor
-def center_crop(tensor, target_size):
-    _, _, h, w = tensor.size()
-    start_x = (w - target_size[1]) // 2
-    start_y = (h - target_size[0]) // 2
-    return tensor[:, :, start_y:start_y+target_size[0], start_x:start_x+target_size[1]]
-
 # Part 3: The expansive path
 class upStep(nn.Module):
   def __init__(self, input_channel, output_channel):
@@ -63,9 +56,10 @@ class upStep(nn.Module):
   def forward(self, x, skip_connection):
     #implement the forward path
     x = self.upsample(x)
-    
-    # Center crop the skip connection to match the size of x
-    skip_connection = center_crop(skip_connection, (x.size(2), x.size(3)))
+
+    # Center crop the skip connection to match the size of x using torchvision's CenterCrop
+    target_size = (x.size(2), x.size(3))
+    skip_connection = CenterCrop(skip_connection, output_size=target_size)
 
     # Concatenate with skip connection
     x = torch.cat([x, skip_connection], dim=1)

@@ -1,0 +1,26 @@
+batch 0 --- Loss: 0.4094
+batch 1 --- Loss: 0.3996
+Traceback (most recent call last):
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\train.py", line 94, in <module>
+    for i, data in enumerate(trainloader):
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\dataloader.py", line 633, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\dataloader.py", line 677, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\dataloader.py", line 122, in __getitem__
+    image, mask = self._apply_augmentation(image, mask, augment_mode)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alienware\Desktop\VC CMPT742\A2\assignment_2\dataloader.py", line 98, in _apply_augmentation
+    elastic_transformer = ElasticTransform(alpha=10, sigma=10)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alienware\AppData\Local\Programs\Python\Python311\Lib\site-packages\torchvision\transforms\transforms.py", line 2078, in __init__
+    raise TypeError(f"alpha should be float or a sequence of floats. Got {type(alpha)}")
+TypeError: alpha should be float or a sequence of floats. Got <class 'int'>

@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.5",
+    "heartbeatAt": "2023-11-04T03:42:11.582896",
+    "startedAt": "2023-11-04T03:42:10.538574",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py",
+    "codePathLocal": "assignment_2\\train.py",
+    "codePath": "A2\\assignment_2\\train.py",
+    "git": {
+        "remote": null,
+        "commit": "88058765b46f5b610d751138e5e069fa9e2af055"
+    },
+    "email": "wenhewangcrane@gmail.com",
+    "root": "C:/Users/Alienware/Desktop/VC CMPT742",
+    "host": "wenhe",
+    "username": "Alienware",
+    "executable": "C:\\Users\\Alienware\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 24,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2200.0,
+        "min": 0.0,
+        "max": 2200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.0,
+            "min": 0.0,
+            "max": 2200.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.1415977478027,
+            "used": 188.66301345825195
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+            "memory_total": 12878610432
+        }
+    ],
+    "memory": {
+        "total": 63.76631164550781
+    }
+}

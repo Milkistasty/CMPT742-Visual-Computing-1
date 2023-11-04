@@ -1,0 +1,28 @@
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Configure stats pid to 24536
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Alienware\.config\wandb\settings
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\settings
+2023-11-03 20:42:10,546 WARNING MainThread:24536 [wandb_setup.py:_flush():76] Unknown environment variable: WANDB_DISABLE_SYMLINKS
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'A2\\assignment_2\\train.py', 'program_abspath': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py', 'program': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py'}
+2023-11-03 20:42:10,546 INFO    MainThread:24536 [wandb_init.py:_log_setup():528] Logging user logs to C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\logs\debug.log
+2023-11-03 20:42:10,547 INFO    MainThread:24536 [wandb_init.py:_log_setup():529] Logging internal logs to C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\logs\debug-internal.log
+2023-11-03 20:42:10,547 INFO    MainThread:24536 [wandb_init.py:init():568] calling init triggers
+2023-11-03 20:42:10,547 INFO    MainThread:24536 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'learning_rate': 1e-05, 'epochs': 5, 'image_size': 576, 'batch_size': 2, 'gpu': True, 'betas': (0.9, 0.999), 'weight_decay': 1e-08}
+2023-11-03 20:42:10,547 INFO    MainThread:24536 [wandb_init.py:init():618] starting backend
+2023-11-03 20:42:10,547 INFO    MainThread:24536 [wandb_init.py:init():622] setting up manager
+2023-11-03 20:42:10,550 INFO    MainThread:24536 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-11-03 20:42:10,551 INFO    MainThread:24536 [wandb_init.py:init():628] backend started and connected
+2023-11-03 20:42:10,553 INFO    MainThread:24536 [wandb_init.py:init():720] updated telemetry
+2023-11-03 20:42:10,598 INFO    MainThread:24536 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-11-03 20:42:11,122 INFO    MainThread:24536 [wandb_run.py:_on_init():2220] communicating current version
+2023-11-03 20:42:11,526 INFO    MainThread:24536 [wandb_run.py:_on_init():2229] got version response 
+2023-11-03 20:42:11,526 INFO    MainThread:24536 [wandb_init.py:init():804] starting run threads in backend
+2023-11-03 20:42:11,732 INFO    MainThread:24536 [wandb_run.py:_console_start():2199] atexit reg
+2023-11-03 20:42:11,732 INFO    MainThread:24536 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-11-03 20:42:11,732 INFO    MainThread:24536 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-11-03 20:42:11,732 INFO    MainThread:24536 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-11-03 20:42:11,732 INFO    MainThread:24536 [wandb_init.py:init():845] run started, returning control to user process
+2023-11-03 20:42:12,119 INFO    MainThread:24536 [wandb_watch.py:watch():51] Watching

@@ -1,0 +1,83 @@
+2023-11-03 20:42:10,552 INFO    StreamThr :23800 [internal.py:wandb_internal():86] W&B internal server running at pid: 23800, started at: 2023-11-03 20:42:10.551101
+2023-11-03 20:42:10,553 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status
+2023-11-03 20:42:10,554 INFO    WriterThread:23800 [datastore.py:open_for_write():85] open: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\run-tzbw1mx5.wandb
+2023-11-03 20:42:10,555 DEBUG   SenderThread:23800 [sender.py:send():380] send: header
+2023-11-03 20:42:10,599 DEBUG   SenderThread:23800 [sender.py:send():380] send: run
+2023-11-03 20:42:11,114 INFO    SenderThread:23800 [dir_watcher.py:__init__():211] watching files in: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files
+2023-11-03 20:42:11,114 INFO    SenderThread:23800 [sender.py:_start_run_threads():1122] run started: tzbw1mx5 with start time 1699069330.551101
+2023-11-03 20:42:11,122 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: check_version
+2023-11-03 20:42:11,122 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: check_version
+2023-11-03 20:42:11,531 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: run_start
+2023-11-03 20:42:11,567 DEBUG   HandlerThread:23800 [system_info.py:__init__():32] System info init
+2023-11-03 20:42:11,567 DEBUG   HandlerThread:23800 [system_info.py:__init__():47] System info init done
+2023-11-03 20:42:11,567 INFO    HandlerThread:23800 [system_monitor.py:start():194] Starting system monitor
+2023-11-03 20:42:11,567 INFO    SystemMonitor:23800 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-03 20:42:11,567 INFO    HandlerThread:23800 [system_monitor.py:probe():214] Collecting system info
+2023-11-03 20:42:11,571 INFO    SystemMonitor:23800 [interfaces.py:start():190] Started cpu monitoring
+2023-11-03 20:42:11,572 INFO    SystemMonitor:23800 [interfaces.py:start():190] Started disk monitoring
+2023-11-03 20:42:11,572 INFO    SystemMonitor:23800 [interfaces.py:start():190] Started gpu monitoring
+2023-11-03 20:42:11,578 INFO    SystemMonitor:23800 [interfaces.py:start():190] Started memory monitoring
+2023-11-03 20:42:11,582 DEBUG   HandlerThread:23800 [system_info.py:probe():196] Probing system
+2023-11-03 20:42:11,597 INFO    SystemMonitor:23800 [interfaces.py:start():190] Started network monitoring
+2023-11-03 20:42:11,612 DEBUG   HandlerThread:23800 [system_info.py:_probe_git():181] Probing git
+2023-11-03 20:42:11,723 DEBUG   HandlerThread:23800 [system_info.py:_probe_git():189] Probing git done
+2023-11-03 20:42:11,723 DEBUG   HandlerThread:23800 [system_info.py:probe():244] Probing system done
+2023-11-03 20:42:11,723 DEBUG   HandlerThread:23800 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.5', 'heartbeatAt': '2023-11-04T03:42:11.582896', 'startedAt': '2023-11-04T03:42:10.538574', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py', 'codePathLocal': 'assignment_2\\train.py', 'codePath': 'A2\\assignment_2\\train.py', 'git': {'remote': None, 'commit': '88058765b46f5b610d751138e5e069fa9e2af055'}, 'email': 'wenhewangcrane@gmail.com', 'root': 'C:/Users/Alienware/Desktop/VC CMPT742', 'host': 'wenhe', 'username': 'Alienware', 'executable': 'C:\\Users\\Alienware\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2200.0, 'min': 0.0, 'max': 2200.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 0.0, 'max': 2200.0}], 'disk': {'/': {'total': 931.1415977478027, 'used': 188.66301345825195}}, 'gpu': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'memory_total': 12878610432}], 'memory': {'total': 63.76631164550781}}
+2023-11-03 20:42:11,723 INFO    HandlerThread:23800 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-03 20:42:11,723 INFO    HandlerThread:23800 [system_monitor.py:probe():227] Publishing system info
+2023-11-03 20:42:11,723 DEBUG   HandlerThread:23800 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-03 20:42:11,723 DEBUG   HandlerThread:23800 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-03 20:42:11,723 INFO    HandlerThread:23800 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-03 20:42:11,726 DEBUG   SenderThread:23800 [sender.py:send():380] send: files
+2023-11-03 20:42:11,726 INFO    SenderThread:23800 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-03 20:42:11,731 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-03 20:42:11,731 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: stop_status
+2023-11-03 20:42:11,732 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-03 20:42:11,775 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-03 20:42:12,127 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\requirements.txt
+2023-11-03 20:42:12,127 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\wandb-metadata.json
+2023-11-03 20:42:12,188 DEBUG   SenderThread:23800 [sender.py:send():380] send: telemetry
+2023-11-03 20:42:12,188 DEBUG   SenderThread:23800 [sender.py:send():380] send: history
+2023-11-03 20:42:12,188 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: summary_record
+2023-11-03 20:42:12,189 INFO    SenderThread:23800 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-03 20:42:12,189 DEBUG   SenderThread:23800 [sender.py:send():380] send: telemetry
+2023-11-03 20:42:12,482 INFO    wandb-upload_0:23800 [upload_job.py:push():131] Uploaded file C:\Users\ALIENW~1\AppData\Local\Temp\tmperm51ys9wandb\46hiqre0-wandb-metadata.json
+2023-11-03 20:42:13,127 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\wandb-summary.json
+2023-11-03 20:42:14,129 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:15,684 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:16,134 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:18,147 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:20,159 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:20,827 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:22,186 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:24,204 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:25,962 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:26,223 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:26,865 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-03 20:42:26,866 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-03 20:42:26,866 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: stop_status
+2023-11-03 20:42:28,234 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:30,241 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:31,001 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:32,270 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:34,296 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:36,060 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:36,300 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:37,577 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-03 20:42:37,578 DEBUG   SenderThread:23800 [sender.py:send():380] send: history
+2023-11-03 20:42:37,578 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: summary_record
+2023-11-03 20:42:37,578 INFO    SenderThread:23800 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-03 20:42:37,934 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-03 20:42:37,935 DEBUG   SenderThread:23800 [sender.py:send():380] send: history
+2023-11-03 20:42:37,935 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: summary_record
+2023-11-03 20:42:37,936 INFO    SenderThread:23800 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-03 20:42:38,314 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:38,314 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\wandb-summary.json
+2023-11-03 20:42:40,340 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:41,095 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: status_report
+2023-11-03 20:42:41,343 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\config.yaml
+2023-11-03 20:42:42,021 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-03 20:42:42,021 DEBUG   HandlerThread:23800 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-03 20:42:42,022 DEBUG   SenderThread:23800 [sender.py:send_request():407] send_request: stop_status
+2023-11-03 20:42:42,356 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
+2023-11-03 20:42:44,373 INFO    Thread-16 :23800 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231103_204210-tzbw1mx5\files\output.log
