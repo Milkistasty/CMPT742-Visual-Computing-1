@@ -1,18 +1,18 @@
 {
     "os": "Windows-10-10.0.22621-SP0",
     "python": "3.11.5",
-    "heartbeatAt": "2023-11-04T03:41:43.166448",
-    "startedAt": "2023-11-04T03:41:42.206530",
+    "heartbeatAt": "2023-11-05T21:57:41.675120",
+    "startedAt": "2023-11-05T21:57:40.663730",
     "docker": null,
     "cuda": null,
     "args": [],
     "state": "running",
     "program": "c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py",
-    "codePathLocal": "train.py",
+    "codePathLocal": "assignment_2\\train.py",
     "codePath": "A2\\assignment_2\\train.py",
     "git": {
         "remote": null,
-        "commit": "88058765b46f5b610d751138e5e069fa9e2af055"
+        "commit": "759a3946bd4dc6ee6a6e331f0bcd8b43a9da192e"
     },
     "email": "wenhewangcrane@gmail.com",
     "root": "C:/Users/Alienware/Desktop/VC CMPT742",
@@ -36,7 +36,7 @@
     "disk": {
         "/": {
             "total": 931.1415977478027,
-            "used": 188.66184616088867
+            "used": 190.3763885498047
         }
     },
     "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",

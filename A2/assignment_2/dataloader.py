@@ -70,7 +70,8 @@ class Cell_data(Dataset):
         elif augment_mode == 3:
             # Zooming image
             # Calculate the crop size in pixels
-            crop_size = int(self.size * 0.8)  # Assuming to crop 20% off each side
+            k = random.choice([0.7, 0.8, 0.9])
+            crop_size = int(self.size * k)  # Assuming to crop (1-k%)/2 off each side
             center = self.size // 2
             half_crop = crop_size // 2
             # Calculate cropping indices
@@ -120,7 +121,7 @@ class Cell_data(Dataset):
             image = self._load_image(self.images[actual_idx])
             mask = self._load_mask(self.masks[actual_idx])
 
-            # If augment_mode is not 0, apply the corresponding augmentation
+            # If augment_mode is not 0 and augment_data is True, apply the augmentation
             if augment_mode != 0 and self.augment_data:
                 image, mask = self._apply_augmentation(image, mask, augment_mode)
         
