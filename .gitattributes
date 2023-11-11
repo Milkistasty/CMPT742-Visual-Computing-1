@@ -9,3 +9,4 @@ git[[:space:]]commit[[:space:]]-m[[:space:]] filter=lfs diff=lfs merge=lfs -text
 A2/checkpoint.pt filter=lfs diff=lfs merge=lfs -text
 final_project/Super-SloMo/ filter=lfs diff=lfs merge=lfs -text
 final_project/output/ filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
