@@ -14,12 +14,13 @@ import os
 import wandb  # import weights & biases
 os.environ["WANDB_DISABLE_SYMLINKS"] = "true"
 
+
 # Paramteres
 
 # learning rate
 lr = 1e-5
 # number of training epochs
-epoch_n = 5
+epoch_n = 20
 # input image-mask size
 image_size = 576
 # root directory of project
@@ -36,6 +37,11 @@ betas = (0.9, 0.999)
 # hyperparam for SGD
 # L2 regularization. It helps prevent overfitting by adding a penalty to the magnitude of the weights
 weight_decay = 1e-8
+# Early stopping params
+best_loss = float('inf')
+patience = 3  # num of epoches to wait for improvement
+patience_counter = 0
+
 
 # Initialize W&B for logging
 wandb.init(
@@ -50,9 +56,11 @@ wandb.init(
     "batch_size": batch_size,
     "gpu": gpu,
     "betas": betas,
-    "weight_decay": weight_decay
+    "weight_decay": weight_decay,
+    "patience": patience
     }
 )
+
 
 # 1. Create dataset
 data_dir = os.path.join(root_dir, 'data/cells')
@@ -155,8 +163,22 @@ for e in range(epoch_n):
         wandb.log({"Validation Accuracy": correct / total, 
                    "Validation Loss": total_loss / testset.__len__()})
 
+    # Check for improvement
+    current_loss = total_loss / testset.__len__()
+    if current_loss < best_loss:
+        best_loss = current_loss
+        patience_counter = 0
+        torch.save(model.state_dict(), 'checkpoint.pt')
+    else:
+        patience_counter += 1
+
+    if patience_counter >= patience:
+        print("Early stopped")
+        break
+
 torch.save(model.state_dict(), 'checkpoint.pt')
 wandb.save('checkpoint.pt')
+wandb.finish()
 
 #testing and visualization
 
@@ -192,6 +214,3 @@ for i in range(testset.__len__()):
   axes[i, 1].set_title("Output Mask for Image {}".format(i+1))
 
 plt.show()
-
-# Finish the W&B run
-wandb.finish()

@@ -11,7 +11,7 @@ from torchvision.transforms.functional import center_crop as CenterCrop
 
 # Part 1: The Convolutional blocks
 class twoConvBlock(nn.Module):
-  def __init__(self, input_channel, output_channel):
+  def __init__(self, input_channel, output_channel, dropout_prob=0.2):
     super(twoConvBlock, self).__init__()
     #initialize the block
     self.double_conv = nn.Sequential(
@@ -19,7 +19,8 @@ class twoConvBlock(nn.Module):
         nn.ReLU(inplace=True),
         nn.Conv2d(output_channel, output_channel, kernel_size=3, padding=1, bias=False),
         nn.BatchNorm2d(output_channel),
-        nn.ReLU(inplace=True)
+        nn.ReLU(inplace=True),
+        nn.Dropout(dropout_prob)
     )
 
   def forward(self, x):
