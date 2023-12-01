@@ -1,0 +1,633 @@
+2023-11-20 20:36:56,511 INFO    StreamThr :32020 [internal.py:wandb_internal():86] W&B internal server running at pid: 32020, started at: 2023-11-20 20:36:56.511654
+2023-11-20 20:36:56,512 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status
+2023-11-20 20:36:56,514 INFO    WriterThread:32020 [datastore.py:open_for_write():85] open: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\run-qyx7aqwk.wandb
+2023-11-20 20:36:56,515 DEBUG   SenderThread:32020 [sender.py:send():380] send: header
+2023-11-20 20:36:56,560 DEBUG   SenderThread:32020 [sender.py:send():380] send: run
+2023-11-20 20:36:57,109 INFO    SenderThread:32020 [dir_watcher.py:__init__():211] watching files in: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files
+2023-11-20 20:36:57,109 INFO    SenderThread:32020 [sender.py:_start_run_threads():1122] run started: qyx7aqwk with start time 1700541416.511654
+2023-11-20 20:36:57,115 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: check_version
+2023-11-20 20:36:57,115 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: check_version
+2023-11-20 20:36:57,475 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: run_start
+2023-11-20 20:36:57,552 DEBUG   HandlerThread:32020 [system_info.py:__init__():32] System info init
+2023-11-20 20:36:57,552 DEBUG   HandlerThread:32020 [system_info.py:__init__():47] System info init done
+2023-11-20 20:36:57,552 INFO    HandlerThread:32020 [system_monitor.py:start():194] Starting system monitor
+2023-11-20 20:36:57,552 INFO    SystemMonitor:32020 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-20 20:36:57,552 INFO    HandlerThread:32020 [system_monitor.py:probe():214] Collecting system info
+2023-11-20 20:36:57,560 INFO    SystemMonitor:32020 [interfaces.py:start():190] Started cpu monitoring
+2023-11-20 20:36:57,560 INFO    SystemMonitor:32020 [interfaces.py:start():190] Started disk monitoring
+2023-11-20 20:36:57,561 INFO    SystemMonitor:32020 [interfaces.py:start():190] Started gpu monitoring
+2023-11-20 20:36:57,567 INFO    SystemMonitor:32020 [interfaces.py:start():190] Started memory monitoring
+2023-11-20 20:36:57,574 INFO    SystemMonitor:32020 [interfaces.py:start():190] Started network monitoring
+2023-11-20 20:36:57,582 DEBUG   HandlerThread:32020 [system_info.py:probe():196] Probing system
+2023-11-20 20:36:57,583 DEBUG   HandlerThread:32020 [system_info.py:_probe_git():181] Probing git
+2023-11-20 20:36:57,674 DEBUG   HandlerThread:32020 [system_info.py:_probe_git():189] Probing git done
+2023-11-20 20:36:57,674 DEBUG   HandlerThread:32020 [system_info.py:probe():244] Probing system done
+2023-11-20 20:36:57,674 DEBUG   HandlerThread:32020 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.5', 'heartbeatAt': '2023-11-21T04:36:57.582369', 'startedAt': '2023-11-21T04:36:56.505667', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\Alienware\\Desktop\\VC CMPT742\\A2\\assignment_2\\train.py', 'codePathLocal': 'assignment_2\\train.py', 'codePath': 'A2\\assignment_2\\train.py', 'git': {'remote': None, 'commit': '2480cab1f611ee0c5be88b7c3369382608a0fd08'}, 'email': 'wenhewangcrane@gmail.com', 'root': 'C:/Users/Alienware/Desktop/VC CMPT742', 'host': 'wenhe', 'username': 'Alienware', 'executable': 'C:\\Users\\Alienware\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2200.0, 'min': 0.0, 'max': 2200.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 0.0, 'max': 2200.0}], 'disk': {'/': {'total': 931.1415977478027, 'used': 194.48794174194336}}, 'gpu': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080 Laptop GPU', 'memory_total': 12878610432}], 'memory': {'total': 63.76631164550781}}
+2023-11-20 20:36:57,674 INFO    HandlerThread:32020 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-20 20:36:57,674 INFO    HandlerThread:32020 [system_monitor.py:probe():227] Publishing system info
+2023-11-20 20:36:57,675 DEBUG   HandlerThread:32020 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-20 20:36:57,675 DEBUG   HandlerThread:32020 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-20 20:36:57,675 INFO    HandlerThread:32020 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-20 20:36:57,679 DEBUG   SenderThread:32020 [sender.py:send():380] send: files
+2023-11-20 20:36:57,679 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-20 20:36:57,683 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:36:57,683 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:36:57,684 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:36:57,719 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:36:58,121 DEBUG   SenderThread:32020 [sender.py:send():380] send: telemetry
+2023-11-20 20:36:58,121 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:36:58,121 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:36:58,121 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:36:58,122 DEBUG   SenderThread:32020 [sender.py:send():380] send: telemetry
+2023-11-20 20:36:58,125 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-metadata.json
+2023-11-20 20:36:58,125 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\requirements.txt
+2023-11-20 20:36:58,125 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:36:58,393 INFO    wandb-upload_0:32020 [upload_job.py:push():131] Uploaded file C:\Users\ALIENW~1\AppData\Local\Temp\tmpqa5fw55fwandb\1xkt6ml5-wandb-metadata.json
+2023-11-20 20:36:59,134 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:01,155 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:01,865 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:03,184 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:05,209 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:07,103 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:07,232 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:09,256 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:11,281 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:12,144 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:12,827 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:37:12,828 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:37:12,828 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:37:13,294 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:15,314 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:17,266 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:17,337 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:19,351 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:21,437 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:22,485 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:23,454 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:25,467 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:27,492 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:27,613 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:27,824 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:37:27,825 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:37:27,840 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:37:28,506 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\config.yaml
+2023-11-20 20:37:29,514 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:30,385 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:37:30,385 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:37:30,385 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:37:30,385 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:37:30,523 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:37:30,687 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:37:30,688 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:37:30,688 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:37:30,688 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:37:31,538 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:31,538 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:37:33,075 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:33,606 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:35,638 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:37,655 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:38,083 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:39,676 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:41,695 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:42,830 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:37:42,830 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:37:43,025 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:37:43,548 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:43,725 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:45,744 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:47,760 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:48,565 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:49,779 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:51,801 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:53,627 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:53,825 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:55,847 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:57,586 DEBUG   SystemMonitor:32020 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-20 20:37:57,587 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:37:57,864 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:37:57,864 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:37:57,875 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:37:58,188 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:37:58,825 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:37:59,898 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:01,917 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:03,305 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:38:03,305 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:38:03,305 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:38:03,305 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:38:03,576 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:38:03,576 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:38:03,576 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:38:03,577 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:38:03,932 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:03,932 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:38:03,936 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:05,944 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:07,964 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:09,101 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:09,982 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:12,006 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:12,883 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:38:12,883 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:38:13,299 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:38:14,022 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:14,143 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:16,042 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:18,081 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:19,346 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:20,105 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:21,117 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:23,137 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:24,549 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:25,159 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:27,188 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:27,635 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:38:28,076 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:38:28,077 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:38:28,500 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:38:29,258 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:29,691 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:31,274 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:33,289 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:34,807 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:35,338 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:36,384 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:38:36,384 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:38:36,385 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:38:36,385 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:38:36,653 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:38:36,654 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:38:36,654 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:38:36,654 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:38:37,362 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:37,362 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:38:39,379 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:39,910 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:41,417 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:43,077 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:38:43,078 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:38:43,441 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:43,523 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:38:44,945 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:45,468 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:47,489 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:49,511 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:50,157 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:51,533 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:53,552 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:55,314 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:38:55,572 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:57,587 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:38:57,650 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:38:58,214 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:38:58,214 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:38:58,638 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:38:59,611 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:00,461 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:01,631 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:03,647 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:05,600 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:05,666 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:07,707 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:09,260 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:39:09,261 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:39:09,261 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:39:09,261 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:39:09,531 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:39:09,532 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:39:09,532 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:39:09,532 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:39:09,727 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:09,727 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:39:10,640 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:11,745 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:13,213 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:39:13,214 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:39:13,640 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:39:13,768 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:15,722 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:15,788 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:17,812 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:19,820 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:20,875 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:21,840 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:23,867 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:25,903 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:26,090 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:27,664 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:39:27,928 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:28,405 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:39:28,405 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:39:28,702 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:39:29,939 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:31,259 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:31,953 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:33,974 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:36,012 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:36,324 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:38,036 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:40,055 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:41,464 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:42,079 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:42,268 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:39:42,269 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:39:42,269 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:39:42,269 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:39:42,537 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:39:42,538 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:39:42,538 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:39:42,538 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:39:43,085 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:39:43,418 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:39:43,418 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:39:43,868 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:39:44,097 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:46,115 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:46,663 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:48,130 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:50,151 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:51,673 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:52,200 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:54,222 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:56,239 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:56,915 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:39:57,664 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:39:58,266 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:39:58,557 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:39:58,558 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:39:58,884 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:40:00,289 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:02,011 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:02,315 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:04,337 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:05,359 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:07,218 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:07,380 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:09,397 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:11,426 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:12,227 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:13,454 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:13,745 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:40:13,745 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:40:13,955 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:40:15,380 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:40:15,380 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:40:15,380 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:40:15,381 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:15,478 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:15,479 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:40:15,651 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:40:15,651 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:40:15,652 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:40:15,652 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:16,485 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:40:17,249 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:17,497 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:19,520 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:21,560 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:22,648 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:23,583 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:25,599 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:27,621 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:27,670 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:40:27,670 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:28,740 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:40:28,741 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:40:28,989 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:40:29,646 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:31,689 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:32,958 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:33,709 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:35,732 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:37,753 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:38,410 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:39,781 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:41,798 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:43,599 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:43,822 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:43,830 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-20 20:40:43,830 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: stop_status
+2023-11-20 20:40:43,995 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:40:45,844 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:47,868 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:48,131 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:40:48,131 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:40:48,131 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:40:48,132 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:48,407 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-20 20:40:48,407 DEBUG   SenderThread:32020 [sender.py:send():380] send: history
+2023-11-20 20:40:48,408 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: summary_record
+2023-11-20 20:40:48,408 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:48,522 DEBUG   SenderThread:32020 [sender.py:send():380] send: telemetry
+2023-11-20 20:40:48,522 DEBUG   SenderThread:32020 [sender.py:send():380] send: files
+2023-11-20 20:40:48,522 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file checkpoint.pt with policy live
+2023-11-20 20:40:48,523 DEBUG   SenderThread:32020 [sender.py:send():380] send: telemetry
+2023-11-20 20:40:48,524 DEBUG   SenderThread:32020 [sender.py:send():380] send: exit
+2023-11-20 20:40:48,524 INFO    SenderThread:32020 [sender.py:send_exit():585] handling exit code: 0
+2023-11-20 20:40:48,524 INFO    SenderThread:32020 [sender.py:send_exit():587] handling runtime: 231
+2023-11-20 20:40:48,524 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:48,524 INFO    SenderThread:32020 [sender.py:send_exit():593] send defer
+2023-11-20 20:40:48,525 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,525 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-20 20:40:48,525 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,525 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-20 20:40:48,525 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 1
+2023-11-20 20:40:48,525 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,525 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-20 20:40:48,525 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,525 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-20 20:40:48,525 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 2
+2023-11-20 20:40:48,525 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,525 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-20 20:40:48,525 INFO    HandlerThread:32020 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-20 20:40:48,525 DEBUG   SystemMonitor:32020 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-20 20:40:48,526 DEBUG   SystemMonitor:32020 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-20 20:40:48,526 INFO    HandlerThread:32020 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-20 20:40:48,526 INFO    HandlerThread:32020 [interfaces.py:finish():202] Joined disk monitor
+2023-11-20 20:40:48,636 INFO    HandlerThread:32020 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-20 20:40:48,636 INFO    HandlerThread:32020 [interfaces.py:finish():202] Joined memory monitor
+2023-11-20 20:40:48,636 INFO    HandlerThread:32020 [interfaces.py:finish():202] Joined network monitor
+2023-11-20 20:40:48,636 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,636 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-20 20:40:48,636 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 3
+2023-11-20 20:40:48,637 DEBUG   SenderThread:32020 [sender.py:send():380] send: stats
+2023-11-20 20:40:48,637 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,637 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-20 20:40:48,637 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:48,637 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,637 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-20 20:40:48,637 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 4
+2023-11-20 20:40:48,637 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,637 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-20 20:40:48,637 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,637 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-20 20:40:48,637 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 5
+2023-11-20 20:40:48,637 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,637 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-20 20:40:48,637 DEBUG   SenderThread:32020 [sender.py:send():380] send: summary
+2023-11-20 20:40:48,639 INFO    SenderThread:32020 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-20 20:40:48,639 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,639 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-20 20:40:48,639 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 6
+2023-11-20 20:40:48,639 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,639 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-20 20:40:48,639 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,639 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-20 20:40:48,640 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:48,776 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 7
+2023-11-20 20:40:48,777 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:48,777 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-20 20:40:48,777 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:48,777 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-20 20:40:48,878 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\config.yaml
+2023-11-20 20:40:48,878 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:40:48,879 INFO    Thread-16 :32020 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\checkpoint.pt
+2023-11-20 20:40:49,394 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 8
+2023-11-20 20:40:49,394 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:49,394 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-20 20:40:49,394 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:49,394 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-20 20:40:49,394 INFO    SenderThread:32020 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-20 20:40:49,394 INFO    SenderThread:32020 [job_builder.py:_get_source_type():404] no source found
+2023-11-20 20:40:49,395 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 9
+2023-11-20 20:40:49,395 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:49,395 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-20 20:40:49,395 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:49,395 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-20 20:40:49,395 INFO    SenderThread:32020 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-20 20:40:49,535 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:49,894 INFO    SenderThread:32020 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:49,894 INFO    SenderThread:32020 [dir_watcher.py:finish():388] scan: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\checkpoint.pt checkpoint.pt
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\config.yaml config.yaml
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log output.log
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\requirements.txt requirements.txt
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-metadata.json wandb-metadata.json
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [dir_watcher.py:finish():402] scan save: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json wandb-summary.json
+2023-11-20 20:40:49,895 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 10
+2023-11-20 20:40:49,896 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:49,896 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:40:49,896 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-20 20:40:49,896 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:40:49,896 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-20 20:40:49,896 INFO    SenderThread:32020 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-20 20:40:50,546 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:50,546 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:50,694 INFO    wandb-upload_1:32020 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\config.yaml
+2023-11-20 20:40:50,724 INFO    wandb-upload_2:32020 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\output.log
+2023-11-20 20:40:51,178 INFO    wandb-upload_3:32020 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\requirements.txt
+2023-11-20 20:40:51,185 INFO    wandb-upload_4:32020 [upload_job.py:push():131] Uploaded file C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\files\wandb-summary.json
+2023-11-20 20:40:51,560 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:51,561 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:52,562 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:52,563 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:53,576 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:53,577 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:54,591 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:54,592 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:54,592 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:55,605 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:55,605 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:56,612 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:56,612 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:57,622 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:57,622 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:58,630 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:58,631 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:40:59,639 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:40:59,640 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:40:59,640 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:00,655 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:00,656 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:01,669 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:01,669 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:02,669 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:02,670 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:03,676 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:03,676 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:04,684 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:04,684 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:04,684 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:05,685 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:05,685 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:06,698 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:06,699 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:07,714 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:07,714 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:08,725 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:08,725 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:09,729 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:09,729 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:09,729 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:10,743 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:10,744 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:11,755 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:11,755 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:12,764 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:12,765 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:13,773 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:13,773 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:14,781 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:14,782 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:14,782 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:15,796 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:15,796 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:16,810 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:16,811 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:17,818 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:17,818 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:18,831 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:18,832 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:19,841 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:19,841 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:19,842 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:20,850 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:20,850 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:21,850 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:21,850 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:22,866 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:22,866 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:23,878 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:23,878 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:24,879 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:24,879 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:24,880 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:25,879 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:25,880 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:26,890 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:26,891 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:27,893 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:27,893 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:28,897 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:28,897 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:29,907 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:29,907 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:29,908 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:30,911 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:30,912 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:31,919 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:31,920 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:32,931 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:32,931 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:33,945 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:33,945 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:34,955 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:34,955 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:34,955 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:35,955 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:35,955 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:36,966 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:36,966 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:37,981 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:37,982 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:38,985 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:38,986 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:40,000 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:40,000 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:40,001 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:41,010 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:41,010 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:42,022 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:42,023 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:43,035 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:43,035 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:44,044 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:44,044 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:45,048 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:45,048 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:45,048 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:46,057 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:46,057 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:47,068 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:47,069 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:48,069 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:48,070 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:49,077 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:49,077 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:50,087 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:50,087 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:50,088 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:51,097 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:51,098 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:52,107 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:52,107 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:53,120 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:53,120 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:54,131 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:54,131 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:55,138 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:41:55,138 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:55,138 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:56,151 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:56,152 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:57,164 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:57,164 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:58,172 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:58,173 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:41:59,182 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:41:59,183 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:00,195 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:42:00,195 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:00,195 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:01,205 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:01,206 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:02,216 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:02,217 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:03,224 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:03,225 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:04,226 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:04,227 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:05,240 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:42:05,240 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:05,240 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:06,252 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:06,252 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:07,265 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:07,265 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:08,278 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:08,279 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:09,289 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:09,289 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:09,923 INFO    wandb-upload_0:32020 [upload_job.py:push():131] Uploaded file C:\Users\ALIENW~1\AppData\Local\Temp\tmpqa5fw55fwandb\pz03j5zi-checkpoint.pt
+2023-11-20 20:42:10,142 INFO    Thread-15 (_thread_body):32020 [sender.py:transition_state():613] send defer: 11
+2023-11-20 20:42:10,142 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:42:10,142 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-20 20:42:10,143 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:42:10,143 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-20 20:42:10,143 INFO    SenderThread:32020 [file_pusher.py:join():181] waiting for file pusher
+2023-11-20 20:42:10,143 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 12
+2023-11-20 20:42:10,143 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:42:10,143 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-20 20:42:10,143 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:42:10,143 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-20 20:42:10,143 INFO    SenderThread:32020 [file_stream.py:finish():595] file stream finish called
+2023-11-20 20:42:10,266 INFO    SenderThread:32020 [file_stream.py:finish():599] file stream finish is done
+2023-11-20 20:42:10,266 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 13
+2023-11-20 20:42:10,267 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:42:10,267 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-20 20:42:10,267 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: status_report
+2023-11-20 20:42:10,267 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:42:10,267 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-20 20:42:10,267 INFO    SenderThread:32020 [sender.py:transition_state():613] send defer: 14
+2023-11-20 20:42:10,267 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: defer
+2023-11-20 20:42:10,267 INFO    HandlerThread:32020 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-20 20:42:10,267 DEBUG   SenderThread:32020 [sender.py:send():380] send: final
+2023-11-20 20:42:10,267 DEBUG   SenderThread:32020 [sender.py:send():380] send: footer
+2023-11-20 20:42:10,267 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: defer
+2023-11-20 20:42:10,267 INFO    SenderThread:32020 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-20 20:42:10,268 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-20 20:42:10,269 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-20 20:42:10,269 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: server_info
+2023-11-20 20:42:10,270 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-20 20:42:10,270 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-20 20:42:10,270 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: job_info
+2023-11-20 20:42:10,270 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: poll_exit
+2023-11-20 20:42:10,270 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: server_info
+2023-11-20 20:42:10,352 DEBUG   SenderThread:32020 [sender.py:send_request():407] send_request: job_info
+2023-11-20 20:42:10,353 DEBUG   HandlerThread:32020 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-20 20:42:10,354 INFO    HandlerThread:32020 [handler.py:finish():866] shutting down handler
+2023-11-20 20:42:11,282 INFO    WriterThread:32020 [datastore.py:close():294] close: C:\Users\Alienware\Desktop\VC CMPT742\A2\wandb\run-20231120_203656-qyx7aqwk\run-qyx7aqwk.wandb
+2023-11-20 20:42:11,359 INFO    SenderThread:32020 [sender.py:finish():1534] shutting down sender
+2023-11-20 20:42:11,359 INFO    SenderThread:32020 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-20 20:42:11,359 INFO    SenderThread:32020 [file_pusher.py:join():181] waiting for file pusher

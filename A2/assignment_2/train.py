@@ -20,7 +20,7 @@ os.environ["WANDB_DISABLE_SYMLINKS"] = "true"
 # learning rate
 lr = 1e-5
 # number of training epochs
-epoch_n = 20
+epoch_n = 30
 # input image-mask size
 image_size = 576
 # root directory of project
@@ -36,7 +36,7 @@ gpu = True
 betas = (0.9, 0.999)
 # hyperparam for SGD
 # L2 regularization. It helps prevent overfitting by adding a penalty to the magnitude of the weights
-weight_decay = 1e-8
+weight_decay = 1e-7
 # Early stopping params
 best_loss = float('inf')
 patience = 3  # num of epoches to wait for improvement

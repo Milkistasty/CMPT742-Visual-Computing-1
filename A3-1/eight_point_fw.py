@@ -152,8 +152,8 @@ if __name__ == '__main__':
     use_ransac = True
 
     #Load images
-    image1_path = os.path.join(data_path, 'myleft.jpg')
-    image2_path = os.path.join(data_path, 'myright.jpg')
+    image1_path = os.path.join(data_path, 'notredam_1.jpg')
+    image2_path = os.path.join(data_path, 'notredam_2.jpg')
     image1 = np.array(Image.open(image1_path).convert('L'))
     image2 = np.array(Image.open(image2_path).convert('L'))
 

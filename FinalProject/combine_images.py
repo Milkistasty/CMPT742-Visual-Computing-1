@@ -31,7 +31,7 @@ height, width, layers = first_img.shape
 
 # Define the codec and create a VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 format
-out = cv2.VideoWriter('output_video.mp4', fourcc, 1, (width, height))
+out = cv2.VideoWriter('C:/Users/Alienware/Desktop/VC CMPT742/FinalProject/final_result/selected_frames_from_sd/output_video.mp4', fourcc, 10, (width, height))
 
 # Write each image into the video file
 for file_path in file_paths:
