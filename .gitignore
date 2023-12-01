@@ -1,8 +1,3 @@
-FinalProject/Super-SloMo/
-*.pt
-lab4/faces.zip
-dataset
-FinalProject/output/DAIN
 *.pdf
 *.mp4
 *.ppt
@@ -14,9 +9,6 @@ FinalProject/output/DAIN
 *.mkv
 *.avi
 *.txt
-FinalProject/projectdata
-FinalProject/MPOSE2021
-FinalProject/output
 *.jpg
 *.jpeg
 *.xlsx
