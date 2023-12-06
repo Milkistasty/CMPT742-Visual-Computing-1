@@ -65,7 +65,10 @@ def normalize_points(pts):
                   [0, 0, 1]])
 
     # Normalize the points
+    # (x, y) -> (x, y, 1)
     pts = T @ np.vstack((pts.T, np.ones(pts.shape[0])))
+
+    # return (x, y)
     return pts[0:2].T, T
 
 def FindFundamentalMatrix(pts1, pts2):
@@ -90,21 +93,27 @@ def FindFundamentalMatrix(pts1, pts2):
     for i in range(len(pts1)):
         x1, y1 = pts1[i]
         x2, y2 = pts2[i]
-        A[i] = [x1 * x2, x1 * y2, x1, y1 * x2, y1 * y2, y1, x2, y2, 1]
+        A[i] = [x1 * x2, x1 * y2, x1, 
+                y1 * x2, y1 * y2, y1, 
+                x2, y2, 1]
         
     #todo: Find the fundamental matrix
-    # Find the SVD of (A^T A)
-    U, S, V = np.linalg.svd(A)
+    # Find the SVD of A
+    U, S, V = np.linalg.svd(A, full_matrices=True)
     # Entries of F are the elements of column of V corresponding to the least singular value
-    F = V[-1].reshape(3, 3)
+    F = V[-1].reshape((3,3), order='F')
 
     # Enforce rank 2 constraint on F
-    U, S, V = np.linalg.svd(F)
-    S[2] = 0
-    F = np.dot(U, np.dot(np.diag(S), V))
+    U, S, V = np.linalg.svd(F, full_matrices=True)
+    S[-1] = 0
+    F = U @ np.diag(S) @ V
 
     # Un-normalize F
-    F = np.dot(T2.T, np.dot(F, T1))
+    F = T2.T @ F @ T1
+
+    # Normalize such that F[2,2] = 1
+    if np.abs(F[2, 2]) > np.finfo(float).eps:
+        F /= F[2, 2]
 
     return F
 
@@ -149,11 +158,11 @@ def FindFundamentalMatrixRansac(pts1, pts2, num_trials = 1000, threshold = 0.01)
 if __name__ == '__main__':
     #Set parameters
     data_path = './data'
-    use_ransac = True
+    # use_ransac = True
 
     #Load images
-    image1_path = os.path.join(data_path, 'notredam_1.jpg')
-    image2_path = os.path.join(data_path, 'notredam_2.jpg')
+    image1_path = os.path.join(data_path, 'myleft.jpg')
+    image2_path = os.path.join(data_path, 'myright.jpg')
     image1 = np.array(Image.open(image1_path).convert('L'))
     image2 = np.array(Image.open(image2_path).convert('L'))
 
@@ -163,45 +172,89 @@ if __name__ == '__main__':
 
     #Builtin opencv function for comparison
     F_true = cv2.findFundamentalMat(pts1, pts2, cv2.FM_8POINT)[0]
+    print(print("OpenCV builtin Fundamental Matrix:", F_true, "\n"))
 
     #todo: FindFundamentalMatrix
-    if use_ransac:
-        F = FindFundamentalMatrixRansac(pts1, pts2)
-    else:
-        F = FindFundamentalMatrix(pts1, pts2)
+    F_8points = FindFundamentalMatrix(pts1, pts2)
+    print("8 points Fundamental Matrix:", F_8points, "\n")
+
+    # Find Fundamental Matrix using RANSAC
+    F_ransac = FindFundamentalMatrixRansac(pts1, pts2)
+    print("RANSAC Fundamental Matrix:", F_ransac, "\n")
 
     # Find epilines corresponding to points in second image,  and draw the lines on first image
-    lines1 = cv2.computeCorrespondEpilines(pts2.reshape(-1, 1, 2), 2, F_true)  # replace F_true with F to test the performance of our algorithm
+    lines1 = cv2.computeCorrespondEpilines(pts2.reshape(-1, 1, 2), 2, F_8points)  # replace F_true with F to test the performance of our algorithm
     lines1 = lines1.reshape(-1, 3)
     img1, img2 = drawlines(image1, image2, lines1, pts1, pts2)
-    fig, axis = plt.subplots(1, 2)
 
-    axis[0].imshow(img1)
-    axis[0].set_title('Image 1')
-    axis[0].axis('off')
-    axis[1].imshow(img2)
-    axis[1].set_title('Image 2')
-    axis[1].axis('off')
+    lines2 = cv2.computeCorrespondEpilines(pts2.reshape(-1, 1, 2), 2, F_ransac)  # replace F_true with F to test the performance of our algorithm
+    lines2 = lines2.reshape(-1, 3)
+    img3, img4 = drawlines(image1, image2, lines2, pts1, pts2)
+
+    lines3 = cv2.computeCorrespondEpilines(pts2.reshape(-1, 1, 2), 2, F_true)  # replace F_true with F to test the performance of our algorithm
+    lines3 = lines3.reshape(-1, 3)
+    img5, img6 = drawlines(image1, image2, lines3, pts1, pts2)
+
+    fig, axis = plt.subplots(3, 2)
+
+    axis[0, 0].imshow(img1)
+    axis[0, 0].set_title('Image 1 using 8 points')
+    axis[0, 0].axis('off')
+    axis[0, 1].imshow(img2)
+    axis[0, 1].set_title('Image 2')
+    axis[0, 1].axis('off')
+    
+    axis[1, 0].imshow(img3)
+    axis[1, 0].set_title('Image 1 using RANSAC')
+    axis[1, 0].axis('off')
+    axis[1, 1].imshow(img4)
+    axis[1, 1].set_title('Image 2')
+    axis[1, 1].axis('off')
+
+    axis[2, 0].imshow(img5)
+    axis[2, 0].set_title('Image 1 using OpenCV builtin')
+    axis[2, 0].axis('off')
+    axis[2, 1].imshow(img6)
+    axis[2, 1].set_title('Image 2')
+    axis[2, 1].axis('off')
 
     plt.show()
 
 
     # Find epilines corresponding to points in first image, and draw the lines on second image
-    lines2 = cv2.computeCorrespondEpilines(pts1.reshape(-1, 1, 2), 1, F_true)  # replace F_true with F to test the performance of our algorithm
-    lines2 = lines2.reshape(-1, 3)
-    img1, img2 = drawlines(image2, image1, lines2, pts2, pts1)
-    fig, axis = plt.subplots(1, 2)
+    lines4 = cv2.computeCorrespondEpilines(pts1.reshape(-1, 1, 2), 1, F_8points)  # replace F_true with F to test the performance of our algorithm
+    lines4 = lines4.reshape(-1, 3)
+    img7, img8 = drawlines(image2, image1, lines4, pts2, pts1)
 
-    axis[0].imshow(img1)
-    axis[0].set_title('Image 1')
-    axis[0].axis('off')
-    axis[1].imshow(img2)
-    axis[1].set_title('Image 2')
-    axis[1].axis('off')
+    lines5 = cv2.computeCorrespondEpilines(pts1.reshape(-1, 1, 2), 1, F_ransac)  # replace F_true with F to test the performance of our algorithm
+    lines5 = lines5.reshape(-1, 3)
+    img9, img10 = drawlines(image2, image1, lines5, pts2, pts1)
+
+    lines6 = cv2.computeCorrespondEpilines(pts1.reshape(-1, 1, 2), 1, F_true)  # replace F_true with F to test the performance of our algorithm
+    lines6 = lines6.reshape(-1, 3)
+    img11, img12 = drawlines(image2, image1, lines6, pts2, pts1)
+
+    fig, axis = plt.subplots(3, 2)
+
+    axis[0, 0].imshow(img7)
+    axis[0, 0].set_title('Image 1 using 8 points')
+    axis[0, 0].axis('off')
+    axis[0, 1].imshow(img8)
+    axis[0, 1].set_title('Image 2')
+    axis[0, 1].axis('off')
+    
+    axis[1, 0].imshow(img9)
+    axis[1, 0].set_title('Image 1 using RANSAC')
+    axis[1, 0].axis('off')
+    axis[1, 1].imshow(img10)
+    axis[1, 1].set_title('Image 2')
+    axis[1, 1].axis('off')
+
+    axis[2, 0].imshow(img11)
+    axis[2, 0].set_title('Image 1 using OpenCV builtin')
+    axis[2, 0].axis('off')
+    axis[2, 1].imshow(img12)
+    axis[2, 1].set_title('Image 2')
+    axis[2, 1].axis('off')
 
     plt.show()
-
-
-
-
-
