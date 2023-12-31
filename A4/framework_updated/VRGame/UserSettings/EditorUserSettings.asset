@@ -5,6 +5,12 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    RecentlyUsedSceneGuid-0:
+      value: 5008570454035e5d5a59597345775a44434e1c7d7478736874781e35bae1303e
+      flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 51530c535301080d585f5e2347755d4443154f2e757074367a2b4c6be6b9603a
+      flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
       flags: 0
@@ -16,9 +22,13 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
+  m_DesiredImportWorkerCount: 8
+  m_StandbyImportWorkerCount: 2
+  m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
   m_VCOverwriteFailedCheckoutAssets: 1
+  m_VCProjectOverlayIcons: 1
+  m_VCHierarchyOverlayIcons: 1
+  m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 0
-  m_AssetPipelineMode: 0
-  m_CacheServerMode: 0
-  m_CacheServers: []
+  m_ArtifactGarbageCollection: 1

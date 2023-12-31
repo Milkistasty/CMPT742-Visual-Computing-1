@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour {
     Animator animator;
     public GameObject spine;
 
-    public bool isDead;
+    public bool isDead  = false;
 
     private Vector3 move_direction;
     private Vector2 mouse_movement;
@@ -99,6 +99,8 @@ public class CharacterMovement : MonoBehaviour {
         else // Moving camera to a fixed point when the player is killed
         {
             Camera.transform.position = cameraFinalPos.transform.position;
+            Camera.transform.rotation = cameraFinalPos.transform.rotation;
+            cameraFinalPos.SetActive(true);
         }
     }
 }
